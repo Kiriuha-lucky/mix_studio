@@ -1,216 +1,509 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="../fonts/opensans.woff2">
-    <link rel="preload" href="../fonts/opensansbold.woff2">
-    <title>HTML Academy: Мишка</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-  <body>
 
+<head>
+  <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="../fonts/opensans.woff2">
+  <link rel="preload" href="../fonts/opensansbold.woff2">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <title>HTML Academy: Мишка</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container">
-      <header class="page-header">
-        <a class="page-header__logo-link" name="top">
+<body>
+  <div class="container">
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <button class="page-header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span></button>
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+      </nav>
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Mix studio" width="85" height="40">
+      <ul class="page-header__contact-list">
+        <li class="page-header__contact-item"></li>
+        <li class="page-header__contact-item"></li>
+      </ul>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Вебкам студия Санкт-Петербург</h1>
+      <div class="page-main__wrapper">
+        <section class="page-main__main main">
+          <h2 class="title main__title">Если хочешь легко зарабатывать?</h2>
+          <h3 class="main__subtitle">присоединяйся к нам!</h3>
           <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка" width="85" height="35">
-          </picture>
-        </a>
-        <nav class="page-header__nav">
-          <button class="page-header__nav-toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span></button>
-          <ul class="page-header__nav-list">
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="#">
-                <svg class="page-header__nav-icon page-header__nav-icon--search" width="17.6" height="17.6">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-                Поиск по сайту</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="#">
-                <svg class="page-header__nav-icon" width="20.294" height="18.849">
-                  <use xlink:href="#icon-cart"></use>
-                </svg>
-                Корзина: пока пуста</a>
-            </li>
-          </ul>
-          <ul class="page-header__add-nav-list">
-            <li class="page-header__add-nav-item">
-              <a class="page-header__add-nav-link" href="#">Новые поступления</a>
-            </li>
-            <li class="page-header__add-nav-item">
-              <a class="page-header__add-nav-link" href="#">Распродажа</a>
-            </li>
-            <li class="page-header__add-nav-item">
-              <a class="page-header__add-nav-link" href="#">Бесплатная доставка по России</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main class="page-main">
-        <h1 class="page-main__title">Милые штуки ручной
-          <br>
-          работы для дома</h1>
-        <nav class="page-main__section-nav">
-          <ul class="page-main__category-list category-list">
-            <li class="category-list__item category-list__item--interior">
-              <a class="category-list__link category-list__link--interior" href="#">Предметы интерьера</a>
-            </li>
-            <li class="category-list__item category-list__item--toys">
-              <a class="category-list__link category-list__link--toys" href="#">Детские игрушки</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="page-main__wrapper">
-          <!-- Товар недели -->
-          <article class="page-main__product-card product-card">
-            <h2 class="product-card__title">Вязаные корзинки</h2>
-            <span class="product-card__tag">Товар недели</span>
-            <p class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <table class="product-card__specifications">
-              <tr>
-                <th class="product-card__property">Цвет:</th>
-                <td class="product-card__value">&#171;Тиффани&#187;/серый</td>
-              </tr>
-              <tr>
-                <th class="product-card__property">Диаметр:</th>
-                <td class="product-card__value">25 см</td>
-              </tr>
-              <tr>
-                <th class="product-card__property">Высота:</th>
-                <td class="product-card__value">15 см</td>
-              </tr>
-            </table>
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/boy-desktop.webp 1x, img/boy-desktop_2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/boy-tablet1x.webp 1x, img/boy-tablet_2x.webp 2x">
+            <source type="image/webp" srcset="img/boy.webp 1x, img/boy_2x.webp 2x">
 
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-              <img class="product-card__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            <source media="(min-width: 1150px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/boy-tablet.png 1x, img/boy-tablet_2x.png 2x">
+            <img class="main__img" src="img/boy.png" srcset="img/boy_2x.png 2x" alt="boy">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/girl-desktop.webp 1x, img/girl-desktop_2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/girl-tablet1x.webp 1x, img/girl-tablet_2x.webp 2x">
+            <source type="image/webp" srcset="img/girl.webp 1x, img/girl_2x.webp 2x">
+
+            <source media="(min-width: 1150px)" srcset="img/girl-desktop.png 1x, img/girl-desktop_2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/girl-tablet.png 1x, img/girl-tablet_2x.png 2x">
+            <img class="main__img-odd" src="img/girl.png" srcset="img/girl_2x.png 2x" alt="girl">
+          </picture>
+
+        </section>
+        <a href="" class="button main__button">Хочу зарабатывать</a>
+        <section class="page-main__about-us about-us">
+          <h2 class="title about-us__title">О нас</h2>
+          <div class="about-us__wrapper">
+            <h4 class="about-us__subtitle">Команда MIX Studio уже более 6ти лет помогает парням
+              и девушкам добиться успеха в индустрии вебкам</h4>
+            <p class="about-us__text">Мы находимся на лидирующих позициях рынка и предоставляем одни из лучших условий в
+              Санкт-Петербурге.<br><br>
+              Если ты хочешь выйти на новый уровень дохода вместе
+              с профессионалами своего дела, работать в центре города
+              по своему индивидуальному графику - оставляй заявку
+              на нашем сайте.</p>
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="img/camera-desktop.webp 1x, img/camera-desktop_2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/camera-tablet1x.webp 1x, img/camera-tablet_2x.webp 2x">
+              <source type="image/webp" srcset="img/camera.webp 1x, img/camera_2x.webp 2x">
+
+              <source media="(min-width: 1150px)" srcset="img/camera-desktop.png 1x, img/camera-desktop_2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/camera-tablet.png 1x, img/camera-tablet_2x.png 2x">
+              <img class="about-us__image" src="img/camera.png" srcset="img/camera_2x.png 2x" alt="camera">
             </picture>
-            <span class="product-card__price">Цена: 990 руб.</span>
-            <a class="button product-card__link" href="#">Заказать</a>
-          </article>
-          <!-- Коротко о нас -->
-          <section class="page-main__about-us about-us">
-            <h2 class="about-us__title">Коротко о нас:</h2>
-            <div class="about-us__wrapper">
-              <ul class="about-us__list">
-                <li class="about-us__item about-us__item--flower">Экологически
-                  <br>
-                  чистые материалы</li>
-                <li class="about-us__item about-us__item--money">Скандинавский стиль
-                  <br>
-                  по российской цене</li>
-                <li class="about-us__item about-us__item--heart">Увеличивает лайки
-                  <br>
-                  на фотографиях</li>
-              </ul>
-              <ul class="about-us__list">
-                <li class="about-us__item about-us__item--ball">Связано вручную с
-                  <br>
-                  любовью и умилением</li>
-                <li class="about-us__item about-us__item--rocket">Поддержка&nbsp;отечественного производителя</li>
-                <li class="about-us__item about-us__item--present">Поставляется в
-                  <br>подарочной упаковке</li>
-              </ul>
-            </div>
-          </section>
-          <!-- Отзывы -->
-          <section class="page-main__reviews reviews">
-            <h2 class="reviews__title">
-              Отзывы
-            </h2>
-            <section class="reviews__slider slider">
-              <ul class="slider__list">
-                <li class="slider__item">
-                  <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                  <p class="reviews__author-name">Анастасия Красильникова</p>
-                  <span class="reviews__author-user-name">@misssssiskras</span>
-                </li>
-              </ul>
-              <div class="slider__btn-group">
-                <button class="slider__btn slider__btn--prev" type="button">
-                  <span class="visually-hidden">Предыдущий отзыв</span></button>
-                <button class="slider__btn slider__btn--next" type="button">
-                  <span class="visually-hidden">Следующий отзыв</span></button>
+            <a href="" class="button main__button">Присоединиться к нам</a>
+          </div>
+        </section>
+        <section class="page-main__advantages advantages">
+          <h2 class="title advantages__title">Преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <!-- <img src="img/money.svg" alt="money"> -->
+              <p class="advantages__text"><span class="advantages-item__title">Высокий заработок</span>Наши модели
+                зарабатывают от 1000$ в месяц. Так сможешь и ты.</p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Гибкий график</span>Ты сама выстраиваешь
+                график работы и можешь совмещать ее с учебой, другой работой или даже бурными вечеринками!</p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Офис в центре</span>Работа в историческом
+                центре Петербурга, рядом с метро.</p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Опытный куратор</span>Наши администраторы
+                научат всему что необходимо для работы. От тебя требуется лишь желание зарабатывать! </p>
+            </li>
+          </ul>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Ежедневные выплаты</span>Наши модели не
+                работают от зарплаты до зарплаты. Они имеют постоянный доход и могут оценить сразу результаты своего
+                труда.</p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Повышенный процент</span>Прогрессивная
+                шкала
+                процентов и куча дополнительных бонусов.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__text"><span class="advantages-item__title">Отсутствие штрафов</span>У нас нет цели
+                заработать на штрафах, тем самым уменьшив ваш доход.
+              </p>
+            </li>
+            <li class="advantages__item--button">
+              <a href="" class="button button--black advantages__button">Хочу зарабатывать</a>
+            </li>
+          </ul>
+        </section>
+        <section class="locations">
+          <h2 class="title locations__title">Локации и дизайн-интерьеры</h2>
+          <p class="locations__text">5 просторных, полностью оборудованных и шумо изолированных комнат. Каждая из них
+            имеет свой уникальный дизайн, что позволить тебе разнообразить свои эфиры и не скучать на смене.</p>
+          <div class="locations__slider"></div>
+        </section>
+        <section class="calculator">
+          <div class="calculation">
+            <h2 class="title calculator__title">Калькулятор дохода</h2>
+            <div class="calculation__wrapper">
+              <h3 class="calculation__title">Количество смен в неделю</h3>
+              <div class="calculation__scale">
+                <ul class="calculation-scale__numbers-list">
+                  <li class="calculation-scale__numbers-item">4</li>
+                  <li class="calculation-scale__numbers-item">5</li>
+                  <li class="calculation-scale__numbers-item">6</li>
+                  <li class="calculation-scale__numbers-item">7</li>
+                  <li class="calculation-scale__numbers-item">8</li>
+                </ul>
+                <div class="calculation-scale__line">
+                  <div class="calculation-scale__line calculation-scale__line--progress"></div>
+                  <div class="calculation-scale__button"></div>
+                </div>
               </div>
-            </section>
-            <a class="button reviews__write-link" href="review.html">Написать</a>
-          </section>
-        </div>
-        <!-- Контакты -->
-        <section class="page-main__contacts contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__table">
-            <tr class="contacts__group">
-              <th class="contacts__method">
-                e-mail:
-              </th>
-              <td class="contacts__value">
-                <a class="contacts__e-mail" href="mailto:info@mimimishkashop.ru">
-                  info@mimimishkashop.ru
-                </a>
-              </td>
+            </div>
+            <div class="calculation__wrapper">
+              <h3 class="calculation__title">Уровень знания английского</h3>
+              <div class="calculation__scale">
+                <ul class="calculation-scale__numbers-list">
+                  <li class="calculation-scale__numbers-item">1</li>
+                  <li class="calculation-scale__numbers-item">2</li>
+                  <li class="calculation-scale__numbers-item">3</li>
+
+                </ul>
+                <div class="calculation-scale__line">
+                  <div class="calculation-scale__line calculation-scale__line--progress"></div>
+                  <div class="calculation-scale__button"></div>
+                </div>
+                <p class="calculation-scale__text">своободно разговариваю</p>
+              </div>
+            </div>
+            <div class="calculation__wrapper">
+              <h3 class="calculation__title">Уровень знания английского</h3>
+              <div class="calculation__scale">
+                <ul class="calculation-scale__numbers-list">
+                  <li class="calculation-scale__numbers-item">1</li>
+                  <li class="calculation-scale__numbers-item">2</li>
+                  <li class="calculation-scale__numbers-item">3</li>
+
+                </ul>
+                <div class="calculation-scale__line">
+                  <div class="calculation-scale__line calculation-scale__line--progress"></div>
+                  <div class="calculation-scale__button"></div>
+                </div>
+                <p class="calculation-scale__text">своободно разговариваю</p>
+              </div>
+            </div>
+          </div>
+          <div class="result">
+            <h3 class="result__title">Итог расчета</h3>
+            <p class="result__sum">1000$</p>
+            <p class="result__text">Данные взяты из реальной статистики наших моделей
+              с опытом до полугода</p>
+          </div>
+        </section>
+        <a href="" class="button main__button">Хочу зарабатывать</a>
+        <section class="profits">
+          <h2 class="title profits__title">Получи сегодня то о чем другие только мечтают</h2>
+          <p class="profits__subtitle">Напишите нам и мы научим как получиь это уже сегодня</p>
+          <ul class="profits__list">
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/club.png" alt="" class="profits__picture" width="190px">
+              </div>
+              <p class="profits-item__title">Деньги на клубы и тусовки</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/flat.png" alt=""
+                  class="profits__picture profits__picture--flat" width="179px">
+              </div>
+              <p class="profits-item__title">Отдельная квартира</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/dress.png" alt="" class="profits__picture"></div>
+              <p class="profits-item__title">Брендовая одежда</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/phone.png" alt="" class="profits__picture"></div>
+              <p class="profits-item__title">Айфон</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/ring.png" alt="" class="profits__picture"></div>
+              <p class="profits-item__title">Ювелирные украшения</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"><img src="img/car.png" alt=""
+                  class="profits__picture profits__picture--car" width="204px"></div>
+              <p class="profits-item__title">Машина</p>
+            </li>
+            <li class="profits__item">
+              <div class="profits__item-wrapper"> <img src="img/tropic.png" alt="" class="profits__picture">
+              </div>
+              <p class="profits-item__title">Отдых на тропических островах</p>
+            </li>
+          </ul>
+        </section>
+        <section class="comand">
+          <h2 class="title comand__title">Нашей команде нужны</h2>
+          <ul class="comand__list">
+            <li class="comand__item">
+              <p class="comand-item__number">1</p>
+              <p class="comand-item__text"><span class="comand-item__title">Модели</span>Как принято считать, акционеры
+                крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако конкретные
+                выводы</p>
+            </li>
+            <li class="comand__item">
+              <p class="comand-item__number">2</p>
+              <p class="comand-item__text"><span class="comand-item__title">Администраторы</span>Как принято считать,
+                акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако
+                конкретные выводы</p>
+            </li>
+            <li class="comand__item">
+              <p class="comand-item__number">3</p>
+              <p class="comand-item__text"><span class="comand-item__title">Операторы</span>Как принято считать,
+                акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако
+                конкретные выводы</p>
+            </li>
+
+          </ul>
+          <a href="" class="button advantages__button">Присоединиться к нам</a>
+        </section>
+        <section class="why">
+          <h2 class="title why__title">Почему именно мы?</h2>
+          <ul class="why__list">
+            <li class="why__item">Опыт в сфере более 6-ти лет</li>
+            <li class="why__item">Нацелены только на высокий результат и знаем как его достичь</li>
+            <li class="why__item">Мы НЕ студия-квартирка,
+              которыми наполнен рынок</li>
+            <li class="why__item">Работаем на качество работы наших моделей, а не на их количество</li>
+            <li class="why__item">Лучшим моделям дарим: путёвки, спа, тренажерный зал
+              и многое другое</li>
+          </ul>
+        </section>
+        <section class="write"></section>
+        <!--
+        <section class="reviews"></section>
+        <section class="questions"></section> -->
+      </div>
+      <foooter class="page-footer"></foooter>
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <header class="page-header">
+      <a class="page-header__logo-link" name="top">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка" width="85" height="35">
+        </picture>
+      </a>
+      <nav class="page-header__nav">
+        <button class="page-header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span></button>
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="#">
+              <svg class="page-header__nav-icon page-header__nav-icon--search" width="17.6" height="17.6">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              Поиск по сайту</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="#">
+              <svg class="page-header__nav-icon" width="20.294" height="18.849">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="page-header__add-nav-list">
+          <li class="page-header__add-nav-item">
+            <a class="page-header__add-nav-link" href="#">Новые поступления</a>
+          </li>
+          <li class="page-header__add-nav-item">
+            <a class="page-header__add-nav-link" href="#">Распродажа</a>
+          </li>
+          <li class="page-header__add-nav-item">
+            <a class="page-header__add-nav-link" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Милые штуки ручной
+        <br>
+        работы для дома
+      </h1>
+      <nav class="page-main__section-nav">
+        <ul class="page-main__category-list category-list">
+          <li class="category-list__item category-list__item--interior">
+            <a class="category-list__link category-list__link--interior" href="#">Предметы интерьера</a>
+          </li>
+          <li class="category-list__item category-list__item--toys">
+            <a class="category-list__link category-list__link--toys" href="#">Детские игрушки</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-main__wrapper">
+        Товар недели
+        <article class="page-main__product-card product-card">
+          <h2 class="product-card__title">Вязаные корзинки</h2>
+          <span class="product-card__tag">Товар недели</span>
+          <p class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и
+            трех размерах.</p>
+          <table class="product-card__specifications">
+            <tr>
+              <th class="product-card__property">Цвет:</th>
+              <td class="product-card__value">&#171;Тиффани&#187;/серый</td>
             </tr>
-            <tr class="contacts__group">
-              <th class="contacts__method">
-                адрес:</th>
-              <td class="contacts__value contacts__value--adress">
-                г. Санкт-Петербург, &#8194;<br> ул.&nbsp;Большая Конюшенная, &#8194;<br> д.&nbsp;19/8, офис 101
-              </td>
+            <tr>
+              <th class="product-card__property">Диаметр:</th>
+              <td class="product-card__value">25 см</td>
+            </tr>
+            <tr>
+              <th class="product-card__property">Высота:</th>
+              <td class="product-card__value">15 см</td>
             </tr>
           </table>
-          <div class="contacts__map"></div>
-          <a class="button contacts__link" href="write_us.html">Напишите нам</a>
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="product-card__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              alt="Вязаные корзинки">
+          </picture>
+          <span class="product-card__price">Цена: 990 руб.</span>
+          <a class="button product-card__link" href="#">Заказать</a>
+        </article>
+         Коротко о нас
+        <section class="page-main__about-us about-us">
+          <h2 class="about-us__title">Коротко о нас:</h2>
+          <div class="about-us__wrapper">
+            <ul class="about-us__list">
+              <li class="about-us__item about-us__item--flower">Экологически
+                <br>
+                чистые материалы
+              </li>
+              <li class="about-us__item about-us__item--money">Скандинавский стиль
+                <br>
+                по российской цене
+              </li>
+              <li class="about-us__item about-us__item--heart">Увеличивает лайки
+                <br>
+                на фотографиях
+              </li>
+            </ul>
+            <ul class="about-us__list">
+              <li class="about-us__item about-us__item--ball">Связано вручную с
+                <br>
+                любовью и умилением
+              </li>
+              <li class="about-us__item about-us__item--rocket">Поддержка&nbsp;отечественного производителя</li>
+              <li class="about-us__item about-us__item--present">Поставляется в
+                <br>подарочной упаковке
+              </li>
+            </ul>
+          </div>
         </section>
-      </main>
-      <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        Отзывы
+        <section class="page-main__reviews reviews">
+          <h2 class="reviews__title">
+            Отзывы
+          </h2>
+          <section class="reviews__slider slider">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+                  лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+                  фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <p class="reviews__author-name">Анастасия Красильникова</p>
+                <span class="reviews__author-user-name">@misssssiskras</span>
+              </li>
+            </ul>
+            <div class="slider__btn-group">
+              <button class="slider__btn slider__btn--prev" type="button">
+                <span class="visually-hidden">Предыдущий отзыв</span></button>
+              <button class="slider__btn slider__btn--next" type="button">
+                <span class="visually-hidden">Следующий отзыв</span></button>
+            </div>
+          </section>
+          <a class="button reviews__write-link" href="review.html">Написать</a>
+        </section>
+      </div>
+       Контакты
+      <section class="page-main__contacts contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <table class="contacts__table">
+          <tr class="contacts__group">
+            <th class="contacts__method">
+              e-mail:
+            </th>
+            <td class="contacts__value">
+              <a class="contacts__e-mail" href="mailto:info@mimimishkashop.ru">
+                info@mimimishkashop.ru
+              </a>
+            </td>
+          </tr>
+          <tr class="contacts__group">
+            <th class="contacts__method">
+              адрес:</th>
+            <td class="contacts__value contacts__value--adress">
+              г. Санкт-Петербург, &#8194;<br> ул.&nbsp;Большая Конюшенная, &#8194;<br> д.&nbsp;19/8, офис 101
+            </td>
+          </tr>
+        </table>
+        <div class="contacts__map"></div>
+        <a class="button contacts__link" href="write_us.html">Напишите нам</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
         <a class="page-footer__logo-link" href="#top">
           <svg class="page-footer__logo-icon" width="101.615" height="34.056">
             <use xlink:href="#logo-footer"></use>
@@ -255,35 +548,40 @@
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
-        </div>
-      </footer>
-      <form class="add-to-cart-form modal" method="post" action="https://echo.htmlacademy.ru">
-        <h2 class="add-to-cart-form__title">Добавить в корзину</h2>
-        <fieldset class="add-to-cart-form__group">
-          <legend class="add-to-cart-form__group-title">Выберите размер:</legend>
-          <ul class="add-to-cart-form__size-list">
-            <li class="add-to-cart-form__size-item">
-              <input type="radio" id="size-s" class="add-to-cart-form__radio visually-hidden" name="filter-size" value="s" checked="checked">
-              <label class="add-to-cart-form__size-label" for="size-s">s</label>
-            </li>
-            <li class="add-to-cart-form__size-item">
-              <input type="radio" id="size-m" class="add-to-cart-form__radio visually-hidden" name="filter-size" value="m">
-              <label class="add-to-cart-form__size-label" for="size-m">m</label>
-            </li>
-            <li class="add-to-cart-form__size-item">
-              <input type="radio" id="size-l" class="add-to-cart-form__radio visually-hidden" name="filter-size" value="l">
-              <label class="add-to-cart-form__size-label" for="size-l">l</label>
-            </li>
-          </ul>
-          <button type="submit" class="add-to-cart-form__button button">Добавить</button>
-        </fieldset>
-      </form>
-      <div class="overlay"></div>
-    </div>
-    <script src="js/product-card.min.js"></script>
-    <script src="js/menu.min.js"></script>
-    <script src="js/picturefill.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCmm91fL3nl-hdff5f8c4_5-k9pr6Pi0U&callback=initMap"type="text/javascript"></script>
-    <script src="js/map.min.js"></script>
-  </body>
+      </div>
+    </footer>
+    <form class="add-to-cart-form modal" method="post" action="https://echo.htmlacademy.ru">
+      <h2 class="add-to-cart-form__title">Добавить в корзину</h2>
+      <fieldset class="add-to-cart-form__group">
+        <legend class="add-to-cart-form__group-title">Выберите размер:</legend>
+        <ul class="add-to-cart-form__size-list">
+          <li class="add-to-cart-form__size-item">
+            <input type="radio" id="size-s" class="add-to-cart-form__radio visually-hidden" name="filter-size" value="s"
+              checked="checked">
+            <label class="add-to-cart-form__size-label" for="size-s">s</label>
+          </li>
+          <li class="add-to-cart-form__size-item">
+            <input type="radio" id="size-m" class="add-to-cart-form__radio visually-hidden" name="filter-size"
+              value="m">
+            <label class="add-to-cart-form__size-label" for="size-m">m</label>
+          </li>
+          <li class="add-to-cart-form__size-item">
+            <input type="radio" id="size-l" class="add-to-cart-form__radio visually-hidden" name="filter-size"
+              value="l">
+            <label class="add-to-cart-form__size-label" for="size-l">l</label>
+          </li>
+        </ul>
+        <button type="submit" class="add-to-cart-form__button button">Добавить</button>
+      </fieldset>
+    </form>
+    <div class="overlay"></div>
+  </div>-->
+  <script src="js/product-card.min.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/picturefill.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCmm91fL3nl-hdff5f8c4_5-k9pr6Pi0U&callback=initMap"
+    type="text/javascript"></script>
+  <script src="js/map.min.js"></script>
+</body>
+
 </html>
