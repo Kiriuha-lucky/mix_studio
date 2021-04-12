@@ -26,7 +26,7 @@ input[type="radio"].visually-hidden {
 
 body {
   margin: 0;
-  background-color: black;
+  background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
 }
 
 .button {
@@ -66,6 +66,11 @@ body {
     border: 1px solid #d8ad78;
     color: #d8ad78;
   }
+
+  @include min($tablet) {
+    width: 340px;
+    min-height: 60px;
+  }
 }
 
 .title {
@@ -76,6 +81,11 @@ body {
   line-height: 30px;
   text-align: center;
   color: #d8ad78;
+
+  @include min($tablet) {
+    font-size: 40px;
+    line-height: 49px;
+  }
 }
 
 .container {
@@ -93,18 +103,31 @@ body {
   padding: 15px 20px;
   background-color: black;
 
+  @include min($tablet) {
+    background: transparent;
+    z-index: 500;
+  }
+
+  &__logo-image {
+    width: 85px;
+
+    @include min($tablet) {
+      width: 127px;
+    }
+  }
+
   &__nav-wrapper {
     box-sizing: border-box;
     z-index: 500;
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     left: 0;
     top: 70px;
     width: 100%;
     height: 100vh;
     padding: 40px 20px;
-    background: linear-gradient(311.98deg, #353A40 6.11%, #16171B 90.27%);
+    background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
     opacity: 0.97;
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
   }
@@ -112,7 +135,6 @@ body {
   &__nav-list {
     @include list-reset;
     margin-bottom: 50px;
-
   }
 
   &__nav-link {
@@ -135,7 +157,6 @@ body {
       margin: 0;
     }
   }
-
 
   &__nav-toggle {
     padding: 0;
@@ -176,6 +197,14 @@ body {
   background-image: url(../img/mixstudio.svg);
   background-repeat: space;
 
+  @include min($tablet) {
+    background-size: 700px;
+    min-height: 650px;
+    margin-top: -90px;
+    padding-top: 125px;
+    margin-bottom: 0;
+  }
+
   &__title {
     margin-bottom: 15px;
   }
@@ -188,22 +217,44 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include min($tablet) {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
 
   &__img {
     position: absolute;
     left: -15px;
     bottom: 0;
+
+    @include min($tablet) {
+      display: none;
+    }
   }
 
   &__img-odd {
     position: absolute;
     bottom: 0;
     right: -15px;
+
+    @include min($tablet) {
+      display: block;
+      width: 375px;
+      right: 0;
+    }
   }
 
   &__button {
     margin-bottom: 30px;
+
+    @include min($tablet) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 340px;
+    }
   }
 }
 
@@ -214,8 +265,25 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include min($tablet) {
+    background-image: url(../img/city-tablet.png);
+    position: relative;
+  }
+
   &__wrapper {
     padding: 0 15px;
+
+    @include min($tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+  }
+
+  &__text-wrapper {
+    @include min($tablet) {
+      padding-top: 40px;
+    }
   }
 
   &__title {
@@ -229,6 +297,12 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+
+    @include min($tablet) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: left;
+    }
   }
 
   &__text {
@@ -244,19 +318,46 @@ body {
     span {
       margin-bottom: 25px;
     }
+
+    @include min($tablet) {
+      font-size: 15px;
+      line-height: 18px;
+      text-align: left;
+    }
   }
 
   &__image {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+
+    @include min($tablet) {
+      width: 322px;
+    }
+  }
+
+  &__button {
+    @include min($tablet) {
+      position: absolute;
+      bottom: 130px;
+      left: 20px;
+    }
   }
 }
 
 .advantages {
   margin-bottom: 60px;
 
-  s &__title {
+  &__wrapper {
+    @include min($tablet) {
+      width: 728px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
     margin-bottom: 25px;
   }
 
@@ -273,8 +374,13 @@ body {
     font-weight: normal;
     font-size: 9px;
     line-height: 11px;
-
     color: #adadad;
+
+    @include min($tablet) {
+      font-size: 11px;
+      line-height: 13px;
+      width: 245px;
+    }
   }
 
   &-item__title {
@@ -283,6 +389,11 @@ body {
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
+
+    @include min($tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__item {
@@ -292,6 +403,12 @@ body {
     padding-left: 70px;
     margin-bottom: 15px;
     min-height: 60px;
+
+    @include min($tablet) {
+      padding-left: 90px;
+      width: 340px;
+      min-height: 80px;
+    }
 
     &::before {
       content: "";
@@ -309,6 +426,12 @@ body {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 30px, auto;
+
+      @include min($tablet) {
+        width: 80px;
+        height: 80px;
+        background-size: 50px, auto;
+      }
     }
 
     &--button {
@@ -526,7 +649,6 @@ body {
 }
 
 .write {
-
   margin-bottom: 55px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -537,7 +659,7 @@ body {
     padding-top: 20px;
     width: 280px;
     margin: 0 auto;
-    background: linear-gradient(180deg, #353A40 -56.47%, #16171B 100%);
+    background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     border: 2px solid #424750;
@@ -555,7 +677,7 @@ body {
     font-size: 13px;
     line-height: 16px;
     text-align: center;
-    color: #ADADAD;
+    color: #adadad;
   }
 
   &__input {
@@ -575,7 +697,7 @@ body {
     font-family: Montserrat;
     font-style: normal;
 
-    background: linear-gradient(311.98deg, #252729 6.11%, #16171B 90.27%);
+    background: linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
     box-shadow: 0px 2px 3px rgba(118, 118, 118, 0.07), inset 0px 4px 7px rgba(0, 0, 0, 0.25);
 
     &:last-child {
@@ -603,7 +725,7 @@ body {
     line-height: 16px;
     text-align: center;
 
-    color: #7A7A7A;
+    color: #7a7a7a;
   }
 }
 
@@ -767,7 +889,6 @@ body {
     }
 
     &:nth-child(5) {
-
       &::before {
         width: 120px;
         height: 120px;
@@ -810,7 +931,6 @@ body {
 }
 
 .questions {
-
   &__title {
     padding: 0 15px;
     margin-bottom: 25px;
@@ -827,23 +947,19 @@ body {
     margin-bottom: 20px;
     border-radius: 7px;
     border: 2px solid #424750;
-    background: linear-gradient(180deg, #353A40 -56.47%, #16171B 100%);
+    background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
     opacity: 0.9;
-
-
 
     &-title {
       position: relative;
       padding: 16px 15px;
       padding-right: 35px;
       margin: 0;
-      background: linear-gradient(180deg, #353A40 -56.47%, #16171B 100%);
+      background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
       font-style: normal;
       font-weight: 500;
       font-size: 13px;
       line-height: 16px;
-
-
 
       &::after {
         position: absolute;
@@ -883,7 +999,7 @@ body {
 }
 
 .footer {
-  background-color: #191A1E;
+  background-color: #191a1e;
   padding: 50px 20px;
 
   &__social-list {
@@ -917,7 +1033,6 @@ body {
       background-image: url(../img/telegram.svg);
     }
   }
-
 
   &__contact-list {
     @include list-reset;
@@ -970,7 +1085,6 @@ body {
       text-decoration: none;
       color: inherit;
     }
-
   }
 
   &__text {
