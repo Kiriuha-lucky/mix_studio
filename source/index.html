@@ -20,20 +20,42 @@
       <nav class="page-header__nav">
         <button class="page-header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span></button>
-        <ul class="page-header__nav-list">
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
+        <div class="page-header__nav-wrapper">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="catalog.html">О нас</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Преимущества</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Локации и дизайн-интерьеры</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Калькулятор дохода</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Возможности</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Вакансии</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Наши плюсы</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Записаться на собеседование</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Отзывы моделей</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">FAQ</a>
+            </li>
+          </ul>
+          <a href="#write" class="button page-header__nav-button">Заказать звонок</a>
+        </div>
+
       </nav>
       <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Mix studio" width="85" height="40">
       <ul class="page-header__contact-list">
@@ -69,9 +91,8 @@
             <source media="(min-width: 768px)" srcset="img/girl-tablet.png 1x, img/girl-tablet_2x.png 2x">
             <img class="main__img-odd" src="img/girl.png" srcset="img/girl_2x.png 2x" alt="girl">
           </picture>
-
         </section>
-        <a href="" class="button main__button">Хочу зарабатывать</a>
+        <a href="#write" class="button main__button">Хочу зарабатывать</a>
         <section class="page-main__about-us about-us">
           <h2 class="title about-us__title">О нас</h2>
           <div class="about-us__wrapper">
@@ -94,7 +115,7 @@
               <source media="(min-width: 768px)" srcset="img/camera-tablet.png 1x, img/camera-tablet_2x.png 2x">
               <img class="about-us__image" src="img/camera.png" srcset="img/camera_2x.png 2x" alt="camera">
             </picture>
-            <a href="" class="button main__button">Присоединиться к нам</a>
+            <a href="#write" class="button main__button">Присоединиться к нам</a>
           </div>
         </section>
         <section class="page-main__advantages advantages">
@@ -136,7 +157,7 @@
               </p>
             </li>
             <li class="advantages__item--button">
-              <a href="" class="button button--black advantages__button">Хочу зарабатывать</a>
+              <a href="#write" class="button button--black advantages__button">Хочу зарабатывать</a>
             </li>
           </ul>
         </section>
@@ -205,7 +226,7 @@
               с опытом до полугода</p>
           </div>
         </section>
-        <a href="" class="button main__button">Хочу зарабатывать</a>
+        <a href="#write" class="button main__button">Хочу зарабатывать</a>
         <section class="profits">
           <h2 class="title profits__title">Получи сегодня то о чем другие только мечтают</h2>
           <p class="profits__subtitle">Напишите нам и мы научим как получиь это уже сегодня</p>
@@ -268,7 +289,7 @@
             </li>
 
           </ul>
-          <a href="" class="button advantages__button">Присоединиться к нам</a>
+          <a href="#write" class="button advantages__button">Присоединиться к нам</a>
         </section>
         <section class="why">
           <h2 class="title why__title">Почему именно мы?</h2>
@@ -282,9 +303,28 @@
               и многое другое</li>
           </ul>
         </section>
-        <section class="write"></section>
-        <!--
-        <section class="reviews"></section>-->
+        <section class="write" id="write">
+          <form action="" class="write__form">
+            <h2 class="title write__title">Напиши нам</h2>
+            <h3 class="write__subtitle">И наши администраторы свяжутся
+              с тобой в ближайшее время</h3>
+            <input class="write__input" type="text" id="name" name="form-type" placeholder="Имя">
+            <input class="write__input" type="number" id="age" name="form-type" placeholder="18">
+            <input class="write__input" type="tel" id="tel" name="form-type" placeholder="Номер телефона">
+            <button class="button write__button" type="submit">Позвоните мне</button>
+          </form>
+          <p class="write__text">Нажимая на кнопку, я даю свое согласие на обработку персональных данных</p>
+        </section>
+
+        <section class="reviews">
+          <h2 class="title reviews__title">Отзывы наших моделей</h2>
+          <ul class="reviews__list">
+            <li class="reviews__item"></li>
+            <li class="reviews__item"></li>
+            <li class="reviews__item"></li>
+            <li class="reviews__item"></li>
+          </ul>
+        </section>
         <section class="questions">
           <h2 class="title questions__title">Ответы на часто задаваемые вопросы</h2>
           <ul class="questions__list">
@@ -350,14 +390,19 @@
       </div>
       <footer class="page-footer footer">
         <ul class="footer__social-list">
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--whatsap"></a></li>
+          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--whatsap"></a>
+          </li>
           <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--vk"></a></li>
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--instagram"></a></li>
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--telegram"></a></li>
+          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--instagram"></a>
+          </li>
+          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--telegram"></a>
+          </li>
         </ul>
         <ul class="footer__contact-list">
-          <li class="footer__contact-item footer__contact-item--phone"><a href="tel:73412249599"> 7 (3412) 249-599 </ a></li>
-          <li class="footer__contact-item footer__contact-item--mail"><a href="mailto:remont@trkprogress.ru">remont@trkprogress.ru</a></li>
+          <li class="footer__contact-item footer__contact-item--phone"><a href="tel:73412249599"> 7 (3412) 249-599 </ a>
+          </li>
+          <li class="footer__contact-item footer__contact-item--mail"><a
+              href="mailto:remont@trkprogress.ru">remont@trkprogress.ru</a></li>
           <li class="footer__contact-item footer__contact-item--clock">Пн-Пт с 08:00 до 17:00</li>
         </ul>
         <p class="footer__text">Политика конфиденциальности</p>
