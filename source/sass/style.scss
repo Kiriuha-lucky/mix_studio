@@ -25,6 +25,7 @@ input[type="radio"].visually-hidden {
 }
 
 body {
+  margin: 0;
   background-color: black;
 }
 
@@ -210,6 +211,7 @@ body {
 
 .advantages {
   margin-bottom: 60px;
+
   s &__title {
     margin-bottom: 25px;
   }
@@ -275,6 +277,7 @@ body {
   margin-bottom: 60px;
   width: 88%;
   margin: 0 auto;
+
   &__title {
     margin-bottom: 25px;
   }
@@ -646,5 +649,179 @@ body {
         background-image: url(../img/prize.svg);
       }
     }
+  }
+}
+
+.questions {
+
+  &__title {
+    padding: 0 15px;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include list-reset;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: 2px solid #424750;
+    background: linear-gradient(180deg, #353A40 -56.47%, #16171B 100%);
+    opacity: 0.9;
+
+
+
+    &-title {
+      position: relative;
+      padding: 16px 15px;
+      padding-right: 35px;
+      margin: 0;
+      background: linear-gradient(180deg, #353A40 -56.47%, #16171B 100%);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+
+
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url(../img/chevron_down.svg);
+      }
+
+      &--close {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+
+    &-text {
+      display: block;
+      margin: 0;
+      padding: 15px;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+
+      &--close {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #191A1E;
+  padding: 50px 20px;
+
+  &__social-list {
+    @include list-reset;
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__social-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 20px;
+
+    &--whatsap {
+      background-image: url(../img/whatsapp.svg);
+    }
+
+    &--vk {
+      background-image: url(../img/vk.svg);
+    }
+
+    &--instagram {
+      background-image: url(../img/instagram.svg);
+    }
+
+    &--telegram {
+      background-image: url(../img/telegram.svg);
+    }
+  }
+
+
+  &__contact-list {
+    @include list-reset;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  &__contact-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 35px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &--phone {
+      &::before {
+        left: 2px;
+        background-image: url(../img/icon_phone.svg);
+      }
+    }
+
+    &--mail {
+      &::before {
+        left: 2px;
+        background-image: url(../img/icon_mail.svg);
+      }
+    }
+
+    &--clock {
+      &::before {
+        left: 2px;
+        background-image: url(../img/icon_clock.svg);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #d8ad78;
   }
 }
