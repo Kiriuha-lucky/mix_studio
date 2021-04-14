@@ -856,6 +856,11 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include min($tablet) {
+    margin-bottom: 70px;
+    background-image: url(../img/comand-tablet.png);
+  }
+
   &__title {
     margin-bottom: 25px;
   }
@@ -873,6 +878,11 @@ body {
     align-items: center;
     width: 280px;
     box-sizing: border-box;
+
+    @include min($tablet) {
+      width: 415px;
+      margin-bottom: 30px;
+    }
   }
 
   &-item__number {
@@ -884,17 +894,26 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #d8ad78;
+
+    @include min($tablet) {
+      font-size: 100px;
+      line-height: 122px;
+    }
   }
 
   &-item__title {
     display: block;
-
     margin-bottom: 12px;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
     color: #ffffff;
+
+    @include min($tablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &-item__text {
@@ -905,13 +924,28 @@ body {
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
-
     color: #adadad;
+
+    @include min($tablet) {
+      font-size: 13px;
+      line-height: 16px;
+      width: auto;
+    }
+  }
+
+  &__button {
+    @include min($tablet) {
+      display: none;
+    }
   }
 }
 
 .why {
   margin-bottom: 55px;
+
+  @include min($tablet) {
+    margin-bottom: 70px;
+  }
 
   &__title {
     padding: 0 20px;
@@ -924,7 +958,7 @@ body {
 
   &__item {
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -948,6 +982,16 @@ body {
 
     transform: skewY(3deg);
 
+    span {
+      color: #d8ad78;
+    }
+
+    @include min($tablet) {
+      font-size: 20px;
+      line-height: 24px;
+      padding-left: 145px;
+    }
+
     &:nth-child(odd) {
       transform: skewY(-3deg);
     }
@@ -964,10 +1008,21 @@ body {
       left: 55px;
       background-size: 150px;
       background-position: 50% 50%;
+
+      @include min($tablet) {
+        width: 150px;
+        height: 150px;
+        background-size: 265px;
+      }
     }
 
     &:nth-child(2) {
       margin-bottom: 55px;
+
+      @include min($tablet) {
+        padding-left: 80px;
+        padding-right: 225px;
+      }
 
       &::before {
         width: 157px;
@@ -977,11 +1032,24 @@ body {
         right: 0;
         background-size: 150px;
         background-image: url(../img/graph.svg);
+
+        @include min($tablet) {
+          width: 206px;
+          height: 150px;
+          background-size: 200px;
+          top: -43px;
+          transform: rotate(-6deg);
+        }
       }
     }
 
     &:nth-child(3) {
       margin-bottom: 45px;
+
+      @include min($tablet) {
+        padding-left: 355px;
+        padding-right: 80px;
+      }
 
       &::before {
         width: 220px;
@@ -991,6 +1059,14 @@ body {
         right: 50px;
         background-size: 192px;
         background-image: url(../img/map.svg);
+
+        @include min($tablet) {
+          width: 336px;
+          height: 226px;
+          background-size: 350px;
+          left: 10px;
+          
+        }
       }
     }
 

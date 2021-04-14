@@ -101,7 +101,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
-  gulp.watch("source/img/*.svg", gulp.series("refresh"));
+  gulp.watch("source/img/*.{png,jpg,jpeg,svg}", gulp.series("refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
