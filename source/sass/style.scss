@@ -1147,6 +1147,7 @@ input:focus {
   @include min($desktop) {
     margin-bottom: 130px;
     background-image: url(../img/comand-desktop.png);
+    background-size: cover;
   }
 
   &__title {
