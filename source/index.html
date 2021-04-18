@@ -16,9 +16,9 @@
 
 <body>
   <div class="container">
-    <header class="page-header">
+    <header class="page-header page-header">
       <nav class="page-header__nav">
-        <button class="page-header__nav-toggle" type="button">
+        <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
           <span class="visually-hidden">Открыть меню</span></button>
         <div class="page-header__nav-wrapper">
           <ul class="page-header__nav-list">
@@ -53,7 +53,29 @@
               <a class="page-header__nav-link" href="form.html">FAQ</a>
             </li>
           </ul>
-          <a href="#write" class="button page-header__nav-button">Заказать звонок</a>
+          <a href="#write" class="button button--black page-header__nav-button">Заказать звонок</a>
+          <div class="footer__wrapper">
+            <ul class="footer__social-list">
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--whatsap"></a>
+              </li>
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--vk"></a></li>
+              <li class="footer__social-item "><a href="#"
+                  class="footer__social-link footer__social-link--instagram"></a>
+              </li>
+              <li class="footer__social-item "><a href="#"
+                  class="footer__social-link footer__social-link--telegram"></a>
+              </li>
+            </ul>
+            <ul class="footer__contact-list">
+              <li class="footer__contact-item footer__contact-item--phone"><a href="tel:73412249599"> 7 (3412) 249-599
+                  </ a>
+              </li>
+              <li class="footer__contact-item footer__contact-item--mail"><a
+                  href="mailto:remont@trkprogress.ru">remont@trkprogress.ru</a></li>
+              <li class="footer__contact-item footer__contact-item--clock">Пн-Пт с 08:00 до 17:00</li>
+            </ul>
+            <p class="footer__text">Политика конфиденциальности</p>
+          </div>
         </div>
 
       </nav>
@@ -69,28 +91,31 @@
         <section class="page-main__main main">
           <h2 class="title main__title">Если хочешь легко зарабатывать?</h2>
           <h3 class="main__subtitle">присоединяйся к нам!</h3>
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)"
-              srcset="img/boy-desktop.webp 1x, img/boy-desktop_2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/boy-tablet1x.webp 1x, img/boy-tablet_2x.webp 2x">
-            <source type="image/webp" srcset="img/boy.webp 1x, img/boy_2x.webp 2x">
+          <div class="main__wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1290px)"
+                srcset="img/boy-desktop.webp 1x, img/boy-desktop_2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/boy-tablet1x.webp 1x, img/boy-tablet_2x.webp 2x">
+              <source type="image/webp" srcset="img/boy.webp 1x, img/boy_2x.webp 2x">
 
-            <source media="(min-width: 1150px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/boy-tablet.png 1x, img/boy-tablet_2x.png 2x">
-            <img class="main__img" src="img/boy.png" srcset="img/boy_2x.png 2x" alt="boy">
-          </picture>
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)"
-              srcset="img/girl-desktop.webp 1x, img/girl-desktop_2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/girl-tablet.webp 1x, img/girl-tablet_2x.webp 2x">
-            <source type="image/webp" srcset="img/girl.webp 1x, img/girl_2x.webp 2x">
+              <source media="(min-width: 1290px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/boy-tablet.png 1x, img/boy-tablet_2x.png 2x">
+              <img class="main__img" src="img/boy.png" srcset="img/boy_2x.png 2x" alt="boy">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1290px)"
+                srcset="img/girl-desktop.webp 1x, img/girl-desktop_2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/girl-tablet.webp 1x, img/girl-tablet_2x.webp 2x">
+              <source type="image/webp" srcset="img/girl.webp 1x, img/girl_2x.webp 2x">
 
-            <source media="(min-width: 1150px)" srcset="img/girl-desktop.png 1x, img/girl-desktop_2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/girl-tablet.png 1x, img/girl-tablet_2x.png 2x">
-            <img class="main__img-odd" src="img/girl.png" srcset="img/girl_2x.png 2x" alt="girl">
-          </picture>
+              <source media="(min-width: 1290px)" srcset="img/girl-desktop.png 1x, img/girl-desktop_2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/girl-tablet.png 1x, img/girl-tablet_2x.png 2x">
+              <img class="main__img-odd" src="img/girl.png" srcset="img/girl_2x.png 2x" alt="girl">
+            </picture>
+          </div>
+
         </section>
         <a href="#write" class="button main__button">Хочу зарабатывать</a>
         <section class="page-main__about-us about-us">
@@ -106,6 +131,7 @@
                 с профессионалами своего дела, работать в центре города
                 по своему индивидуальному графику - оставляй заявку
                 на нашем сайте.</p>
+                <a href="#write" class="button about-us__button--desktop">Присоединиться к нам</a>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
@@ -311,7 +337,9 @@
                 акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако
                 конкретные выводы</p>
             </li>
-
+            <li class="comand__item">
+              <a href="#write" class="button comand__button comand__button--desktop">Присоединиться к нам</a>
+            </li>
           </ul>
           <a href="#write" class="button comand__button">Присоединиться к нам</a>
         </section>
@@ -346,10 +374,11 @@
             <input class="write__input" type="number" id="age" name="form-type" placeholder="18">
             <input class="write__input" type="tel" id="tel" name="form-type" placeholder="Номер телефона">
             <button class="button write__button" type="submit">Позвоните мне</button>
+            <p class="write__text write__text--tablet">Нажимая на кнопку, я даю свое согласие на обработку персональных
+              данных</p>
           </form>
           <p class="write__text">Нажимая на кнопку, я даю свое согласие на обработку персональных данных</p>
         </section>
-
         <section class="reviews">
           <h2 class="title reviews__title">Отзывы наших моделей</h2>
           <ul class="reviews__list">
@@ -423,23 +452,34 @@
         </section>
       </div>
       <footer class="page-footer footer">
-        <ul class="footer__social-list">
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--whatsap"></a>
-          </li>
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--vk"></a></li>
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--instagram"></a>
-          </li>
-          <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--telegram"></a>
-          </li>
-        </ul>
-        <ul class="footer__contact-list">
-          <li class="footer__contact-item footer__contact-item--phone"><a href="tel:73412249599"> 7 (3412) 249-599 </ a>
-          </li>
-          <li class="footer__contact-item footer__contact-item--mail"><a
-              href="mailto:remont@trkprogress.ru">remont@trkprogress.ru</a></li>
-          <li class="footer__contact-item footer__contact-item--clock">Пн-Пт с 08:00 до 17:00</li>
-        </ul>
-        <p class="footer__text">Политика конфиденциальности</p>
+        <div class="footer__main-wrapper">
+          <div class="footer__wrapper">
+            <img class="footer__logo-image" src="img/logo-mobile.svg" alt="Mix studio">
+            <ul class="footer__social-list">
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--whatsap"></a>
+              </li>
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--vk"></a></li>
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--instagram"></a>
+              </li>
+              <li class="footer__social-item "><a href="#" class="footer__social-link footer__social-link--telegram"></a>
+              </li>
+            </ul>
+            <ul class="footer__contact-list">
+              <li class="footer__contact-item footer__contact-item--phone"><a href="tel:73412249599"> 7 (3412) 249-599 </
+                    a>
+              </li>
+              <li class="footer__contact-item footer__contact-item--mail"><a
+                  href="mailto:remont@trkprogress.ru">remont@trkprogress.ru</a></li>
+              <li class="footer__contact-item footer__contact-item--clock">Пн-Пт с 08:00 до 17:00</li>
+            </ul>
+            <p class="footer__text">Политика конфиденциальности</p>
+          </div>
+          <img class="footer__map"
+            src="https://static-maps.yandex.ru/1.x/?ll=37.677751,55.757718&spn=0.016457,0.00619&l=map" alt="map">
+        </div>
+
+
+
       </footer>
     </main>
   </div>

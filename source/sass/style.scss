@@ -61,8 +61,8 @@ body {
   }
 
   &--black {
-    background: none;
-    background-color: transparent;
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid #d8ad78;
     color: #d8ad78;
   }
@@ -70,6 +70,8 @@ body {
   @include min($tablet) {
     width: 340px;
     min-height: 60px;
+    font-size: 20px;
+line-height: 24px;
   }
 }
 
@@ -81,10 +83,17 @@ body {
   line-height: 30px;
   text-align: center;
   color: #d8ad78;
+  margin: 0 auto;
 
   @include min($tablet) {
     font-size: 40px;
     line-height: 49px;
+  }
+
+  @include min($desktop) {
+    font-size: 50px;
+    line-height: 61px;
+    width: 636px;
   }
 }
 
@@ -93,6 +102,14 @@ body {
   outline: 2px solid green;
   width: 100%;
   overflow: hidden;
+
+  @include min($tablet) {
+    width: 768px;
+  }
+
+  @include min($desktop) {
+    width: 100%;
+  }
 }
 
 .page-header {
@@ -102,6 +119,8 @@ body {
   align-items: center;
   padding: 15px 20px;
   background-color: black;
+  max-width: 1290px;
+  margin: 0 auto;
 
   @include min($tablet) {
     background: transparent;
@@ -114,22 +133,6 @@ body {
     @include min($tablet) {
       width: 127px;
     }
-  }
-
-  &__nav-wrapper {
-    box-sizing: border-box;
-    z-index: 500;
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    left: 0;
-    top: 70px;
-    width: 100%;
-    height: 100vh;
-    padding: 40px 20px;
-    background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
-    opacity: 0.97;
-    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
   }
 
   &__nav-list {
@@ -152,9 +155,13 @@ body {
     &:active {
       color: #d8ad78;
     }
+  }
 
-    &__nav-button {
-      margin: 0;
+  &__nav-button {
+    margin: 0;
+
+    @include min($tablet) {
+      margin-bottom: 50px;
     }
   }
 
@@ -187,9 +194,52 @@ body {
       display: none;
     }
   }
+
+  &__nav-wrapper {
+    display: none;
+  }
+
+  &--open {
+    .page-header {
+      &__nav-wrapper {
+        box-sizing: border-box;
+        z-index: 500;
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 20px;
+        background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
+        opacity: 0.85;
+        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
+
+        @include min($tablet) {
+          top: 0;
+          padding-top: 90px;
+          width: 395px;
+          height: auto;
+        }
+      }
+
+      &__nav-toggle {
+        @include min($tablet) {
+          position: absolute;
+          z-index: 510;
+          transform: rotate(90deg);
+          transition: 5s;
+          top: 30px;
+          left: 20px;
+        }
+      }
+    }
+  }
 }
 
 .main {
+  margin: 0 auto;
   margin-bottom: 30px;
   position: relative;
   padding: 23px 20px 0;
@@ -205,8 +255,19 @@ body {
     margin-bottom: 0;
   }
 
+  @include min($desktop) {
+    min-height: auto;
+    background-size: 100vw;
+    background-repeat: repeat;
+    padding-top: 230px;
+  }
+
   &__title {
     margin-bottom: 15px;
+
+    @include min($desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__subtitle {
@@ -222,6 +283,21 @@ body {
       font-size: 30px;
       line-height: 37px;
     }
+
+    @include min($desktop) {
+      font-size: 40px;
+      line-height: 49px;
+      padding-bottom: 453px;
+    }
+  }
+
+  &__wrapper {
+    @include min($desktop) {
+      display: block;
+      position: relative;
+      width: 1290px;
+      margin: 0 auto;
+    }
   }
 
   &__img {
@@ -231,6 +307,12 @@ body {
 
     @include min($tablet) {
       display: none;
+    }
+
+    @include min($desktop) {
+      display: block;
+      width: 518px;
+      left: -160px;
     }
   }
 
@@ -244,6 +326,12 @@ body {
       width: 375px;
       right: 0;
     }
+
+    @include min($desktop) {
+      display: block;
+      width: 599px;
+      right: -180px;
+    }
   }
 
   &__button {
@@ -254,6 +342,10 @@ body {
       left: 50%;
       transform: translateX(-50%);
       top: 340px;
+    }
+
+    @include min($desktop) {
+      top: 540px;
     }
   }
 }
@@ -270,13 +362,25 @@ body {
     position: relative;
   }
 
+  @include min($desktop) {
+    background-image: url(../img/city-desktop.png);
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
   &__wrapper {
     padding: 0 15px;
+    position: relative;
 
     @include min($tablet) {
       display: flex;
       justify-content: space-between;
       padding: 0 20px;
+    }
+
+    @include min($desktop) {
+      width: 1070px;
+      margin: 0 auto;
     }
   }
 
@@ -324,6 +428,10 @@ body {
       line-height: 18px;
       text-align: left;
     }
+
+    @include min($desktop) {
+      margin-bottom: 35px;
+    }
   }
 
   &__image {
@@ -342,11 +450,26 @@ body {
       bottom: 130px;
       left: 20px;
     }
+
+    @include min($desktop) {
+      display: none;
+    }
+
+    &--desktop {
+      @include min($desktop) {
+        display: flex;
+        margin: 0;
+      }
+    }
   }
 }
 
 .advantages {
   margin-bottom: 60px;
+
+  @include min($desktop) {
+    margin-bottom: 130px;
+  }
 
   &__wrapper {
     @include min($tablet) {
@@ -354,6 +477,28 @@ body {
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+    }
+
+    @include min($desktop) {
+      position: relative;
+      width: 850px;
+      padding-left: 423px;
+    }
+
+    &::before {
+      @include min($desktop) {
+        position: absolute;
+        content: "";
+        width: 879px;
+        height: 608px;
+        background-image: url(../img/advantages-desktop.png);
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        bottom: 19px;
+        left: -445px;
+      }
     }
   }
 
@@ -410,6 +555,10 @@ body {
       min-height: 80px;
     }
 
+    @include min($desktop) {
+      width: 410px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -445,9 +594,16 @@ body {
   margin-bottom: 60px;
   width: 88%;
 
+  @include min($desktop) {
+    margin-bottom: 130px;
+  }
 
   &__title {
     margin-bottom: 25px;
+
+    @include min($desktop) {
+      width: auto;
+    }
   }
 
   &__text {
@@ -457,6 +613,12 @@ body {
     font-size: 15px;
     line-height: 18px;
     text-align: center;
+
+    @include min($desktop) {
+      width: 910px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
@@ -489,9 +651,20 @@ body {
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   border: 2px solid #424750;
+  max-width: 1070px;
+
+  @include min($desktop) {
+    margin-bottom: 40px;
+  }
+
+
 
   &__button {
     margin-bottom: 40px;
+
+    @include min($desktop) {
+      margin-bottom: 130px;
+    }
   }
 
   &__title {
@@ -504,7 +677,9 @@ body {
       margin-bottom: 40px;
     }
 
-
+    @include min($desktop) {
+      margin-bottom: 55px;
+    }
   }
 
   & .calculation {
@@ -512,6 +687,20 @@ body {
 
     @include min($tablet) {
       padding: 40px 16px;
+    }
+
+    @include min($desktop) {
+      padding: 45px 110px;
+      padding-bottom: 20px;
+    }
+
+    &__wrapper {
+
+      @include min($desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     &__title {
@@ -535,8 +724,6 @@ body {
       font-size: 14px;
       line-height: 17px;
       color: #7c7c7c;
-
-
     }
 
     &-scale__line {
@@ -602,6 +789,10 @@ body {
       @include min($tablet) {
         width: 410px;
       }
+
+      @include min($desktop) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -609,6 +800,10 @@ body {
 .result {
   padding: 15px 25px;
   background: linear-gradient(180deg, #292e34 -56.47%, #16171b 100%);
+
+  @include min($desktop) {
+    padding: 10px 110px;
+  }
 
   &__title {
     margin-top: 0;
@@ -679,6 +874,11 @@ body {
     @include min($tablet) {
       padding: 0 10%;
     }
+
+    @include min($desktop) {
+      width: 880px;
+      margin: 0 auto;
+    }
   }
 
   &__subtitle {
@@ -690,6 +890,10 @@ body {
     @include min($tablet) {
       font-size: 18px;
       line-height: 22px;
+    }
+
+    @include min($desktop) {
+      margin-bottom: 55px;
     }
   }
 
@@ -706,6 +910,10 @@ body {
       align-items: baseline;
       width: 670px;
     }
+
+    @include min($desktop) {
+     width: 80%;
+    }
   }
 
   &__item {
@@ -717,6 +925,10 @@ body {
       @include min($tablet) {
         flex-grow: 1;
       }
+
+      @include min($desktop) {
+        display: none;
+      }
     }
   }
 
@@ -726,6 +938,8 @@ body {
       margin-left: 50px;
       width: 430px;
     }
+
+
   }
 
   &__picture {
@@ -769,11 +983,40 @@ body {
 }
 
 .write {
+  position: relative;
   margin-bottom: 55px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-image: url(../img/mixstudio.svg);
   background-repeat: space;
+
+  @include min($tablet) {
+    padding-bottom: 400px;
+    background-size: 750px;
+    background-repeat: space;
+    background-position: auto;
+  }
+
+  @include min($desktop) {
+    padding-bottom: 20px;
+    background-size: 90vw;
+    margin-bottom: 130px;
+  }
+
+  &::after {
+    @include min($tablet) {
+      content: "";
+      position: absolute;
+      width: 347px;
+      height: 538px;
+      background-image: url(../img/write_tablet.png);
+      background-size: 266px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      bottom: 0;
+      right: -44px;
+    }
+  }
 
   &__form {
     padding-top: 20px;
@@ -783,12 +1026,23 @@ body {
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     border: 2px solid #424750;
-
     overflow: hidden;
+
+    @include min($tablet) {
+      padding-top: 45px;
+      padding-bottom: 32px;
+      width: 636px;
+      border-radius: 20px;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
+
+    @include min($tablet) {
+      width: 636px;
+      margin-bottom: 32px;
+    }
   }
 
   &__subtitle {
@@ -798,9 +1052,18 @@ body {
     line-height: 16px;
     text-align: center;
     color: #adadad;
+
+    @include min($tablet) {
+      margin-bottom: 30px;
+      padding-left: 160px;
+      padding-right: 160px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__input {
+    outline: none;
     border: none;
     display: block;
     width: 220px;
@@ -808,26 +1071,22 @@ body {
     margin-bottom: 10px;
     padding: 11px;
     border-radius: 7px;
-    font-weight: normal;
     font-size: 15px;
     line-height: 18px;
     align-items: center;
     text-align: center;
     color: #fff;
-    font-family: Montserrat;
-    font-style: normal;
-
     background: linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
     box-shadow: 0px 2px 3px rgba(118, 118, 118, 0.07), inset 0px 4px 7px rgba(0, 0, 0, 0.25);
 
-    &:last-child {
-      margin-bottom: 35px;
+    @include min($tablet) {
+      width: 410px;
+      font-size: 18px;
+      line-height: 22px;
     }
 
-    &::focus,
-    &::hover {
-      color: #d8ad78;
-      outline: 1px solid #d8ad78;
+    & + #tel {
+      margin-bottom: 35px;
     }
   }
 
@@ -836,6 +1095,11 @@ body {
     box-shadow: none;
     border: none;
     border-radius: 0;
+
+    @include min($tablet) {
+      border-radius: 5px;
+      box-shadow: 0px 0px 89px 30px rgba(245, 201, 142, 0.2);
+    }
   }
 
   &__text {
@@ -844,9 +1108,28 @@ body {
     font-size: 13px;
     line-height: 16px;
     text-align: center;
-
     color: #7a7a7a;
+
+    @include min($tablet) {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+
+      @include min($tablet) {
+        display: block;
+        padding-left: 150px;
+        padding-right: 150px;
+      }
+    }
   }
+}
+
+input:focus {
+  color: #d8ad78;
+  border: 1px solid #d8ad78;
+  background-color: #fff;
 }
 
 .comand {
@@ -861,6 +1144,11 @@ body {
     background-image: url(../img/comand-tablet.png);
   }
 
+  @include min($desktop) {
+    margin-bottom: 130px;
+    background-image: url(../img/comand-desktop.png);
+  }
+
   &__title {
     margin-bottom: 25px;
   }
@@ -868,6 +1156,16 @@ body {
   &__list {
     @include list-reset;
     margin-bottom: 35px;
+
+    @include min($desktop) {
+      margin: 0 auto;
+      width: 880px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
   }
 
   &__item {
@@ -881,6 +1179,7 @@ body {
 
     @include min($tablet) {
       width: 415px;
+      flex-shrink: 0;
       margin-bottom: 30px;
     }
   }
@@ -937,6 +1236,16 @@ body {
     @include min($tablet) {
       display: none;
     }
+
+    &--desktop {
+      display: none;
+
+      @include min($desktop) {
+        display: flex;
+      }
+    }
+
+
   }
 }
 
@@ -1065,13 +1374,17 @@ body {
           height: 226px;
           background-size: 350px;
           left: 10px;
-          
         }
       }
     }
 
     &:nth-child(4) {
       margin-bottom: 45px;
+
+      @include min($tablet) {
+        padding-left: 80px;
+        padding-right: 225px;
+      }
 
       &::before {
         width: 140px;
@@ -1081,10 +1394,24 @@ body {
         right: 0;
         background-size: 130px;
         background-image: url(../img/yes.svg);
+
+        @include min($tablet) {
+          width: 154px;
+          height: 164px;
+          background-size: 160px;
+          transform: rotate(-18deg);
+          right: 31px;
+          top: -70px;
+        }
       }
     }
 
     &:nth-child(5) {
+      @include min($tablet) {
+        padding-left: 215px;
+        padding-right: 53px;
+      }
+
       &::before {
         width: 120px;
         height: 120px;
@@ -1092,6 +1419,14 @@ body {
         top: -73px;
         background-size: 110px;
         background-image: url(../img/prize.svg);
+
+        @include min($tablet) {
+          width: 182px;
+          height: 169px;
+          background-size: 188px;
+          left: 48px;
+          top: -35px;
+        }
       }
     }
   }
@@ -1100,8 +1435,17 @@ body {
 .reviews {
   margin-bottom: 45px;
 
+  @include min($tablet) {
+    margin-bottom: 75px;
+  }
+
   &__title {
     margin-bottom: 25px;
+
+    @include min($desktop) {
+      margin-bottom: 50px;
+      width: auto;
+    }
   }
 
   &__list {
@@ -1110,6 +1454,11 @@ body {
     display: flex;
 
     overflow: scroll;
+
+    @include min($desktop) {
+      max-width: 1130px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -1120,6 +1469,12 @@ body {
     margin-right: 20px;
     background-color: #fff;
 
+    @include min($tablet) {
+      width: 410px;
+      height: 222px;
+      margin-right: 30px;
+    }
+
     &:first-child {
       margin-left: 20px;
     }
@@ -1127,15 +1482,36 @@ body {
 }
 
 .questions {
+max-width: 1070px;
+margin: 0 auto;
+
   &__title {
     padding: 0 15px;
     margin-bottom: 25px;
+
+    @include min($tablet) {
+      width: 636px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    @include min($desktop) {
+      width: auto;
+    }
   }
 
   &__list {
     @include list-reset;
     width: 280px;
     margin: 0 auto;
+
+    @include min($tablet) {
+      width: 728px;
+    }
+
+    @include min($desktop) {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -1156,6 +1532,13 @@ body {
       font-weight: 500;
       font-size: 13px;
       line-height: 16px;
+
+      @include min($tablet) {
+        padding: 20px 30px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 50px;
+      }
 
       &::after {
         position: absolute;
@@ -1187,6 +1570,12 @@ body {
       font-size: 10px;
       line-height: 12px;
 
+      @include min($tablet) {
+        padding: 20px 30px;
+        font-size: 13px;
+        line-height: 16px;
+      }
+
       &--close {
         display: none;
       }
@@ -1197,6 +1586,55 @@ body {
 .footer {
   background-color: #191a1e;
   padding: 50px 20px;
+
+
+
+  &__main-wrapper {
+    position: relative;
+
+
+    @include min($tablet) {
+      padding: 50px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include min($desktop) {
+      padding: 5px 20px;
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+  }
+
+
+
+  &__wrapper {
+    margin-bottom: 30px;
+
+    @include min($desktop) {
+      width: 1290px;
+    }
+  }
+
+  &__logo-image {
+    display: none;
+
+    @include min($tablet) {
+      margin-bottom: 30px;
+      width: 230px;
+      height: 109px;
+      display: block;
+    }
+
+    @include min($desktop) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+    }
+  }
 
   &__social-list {
     @include list-reset;
@@ -1290,5 +1728,13 @@ body {
     line-height: 18px;
     text-decoration-line: underline;
     color: #d8ad78;
+  }
+
+  &__map {
+    width: 100%;
+
+    @include min($tablet) {
+      width: 350px;
+    }
   }
 }
