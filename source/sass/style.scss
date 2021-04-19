@@ -117,7 +117,7 @@ body {
   overflow: hidden;
 
   @include min($tablet) {
-    width: 768px;
+    width: 100%;
   }
 
   @include min($desktop) {
