@@ -26,6 +26,7 @@ input[type="radio"].visually-hidden {
 
 body {
   margin: 0;
+  width: 100%;
   background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
 }
 
@@ -65,13 +66,24 @@ body {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #d8ad78;
     color: #d8ad78;
+
+    &:hover {
+      background: transparent;
+      box-shadow: 0px 0px 89px 30px rgba(245, 201, 142, 0.25);
+    }
+  
+    &:active {
+      background: transparent;
+      opacity: 0.4;
+    }
   }
 
   @include min($tablet) {
     width: 340px;
     min-height: 60px;
     font-size: 20px;
-line-height: 24px;
+    line-height: 24px;
+    cursor: pointer;
   }
 }
 
@@ -100,6 +112,7 @@ line-height: 24px;
 .container {
   margin: 0 auto;
   outline: 2px solid green;
+  min-width: 320px;
   width: 100%;
   overflow: hidden;
 
@@ -119,8 +132,10 @@ line-height: 24px;
   align-items: center;
   padding: 15px 20px;
   background-color: black;
+  width: 100%;
   max-width: 1290px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @include min($tablet) {
     background: transparent;
@@ -132,6 +147,14 @@ line-height: 24px;
 
     @include min($tablet) {
       width: 127px;
+    }
+  }
+
+  & .footer__wrapper {
+    display: none;
+
+    @include min($tablet) {
+      display: block;
     }
   }
 
@@ -166,12 +189,15 @@ line-height: 24px;
   }
 
   &__nav-toggle {
+    outline: none;
     padding: 0;
     width: 30px;
     height: 30px;
     background-image: url(../img/menu_duo.svg);
     border: none;
     background-color: transparent;
+    transition: all 0.5s;
+    cursor: pointer;
   }
 
   &__contact-list {
@@ -197,39 +223,40 @@ line-height: 24px;
 
   &__nav-wrapper {
     display: none;
+    box-sizing: border-box;
+    z-index: 500;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
+    opacity: 0.85;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
+
+    @include min($tablet) {
+      top: 0;
+      padding-top: 90px;
+      width: 395px;
+      height: auto;
+    }
   }
 
   &--open {
     .page-header {
       &__nav-wrapper {
-        box-sizing: border-box;
-        z-index: 500;
-        position: absolute;
         display: block;
-        flex-direction: column;
-        left: 0;
-        top: 70px;
-        width: 100%;
-        height: 100vh;
-        padding: 40px 20px;
-        background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
-        opacity: 0.85;
-        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
-
-        @include min($tablet) {
-          top: 0;
-          padding-top: 90px;
-          width: 395px;
-          height: auto;
-        }
       }
 
       &__nav-toggle {
+        transform: rotate(90deg);
+
         @include min($tablet) {
           position: absolute;
           z-index: 510;
           transform: rotate(90deg);
-          transition: 5s;
           top: 30px;
           left: 20px;
         }
@@ -456,6 +483,8 @@ line-height: 24px;
     }
 
     &--desktop {
+      display: none;
+
       @include min($desktop) {
         display: flex;
         margin: 0;
@@ -585,6 +614,10 @@ line-height: 24px;
 
     &--button {
       padding: 0;
+
+      @include min($desktop) {
+        margin-left: -65px;
+      }
     }
   }
 }
@@ -868,6 +901,8 @@ line-height: 24px;
 }
 
 .profits {
+  width: 100%;
+
   &__title {
     margin-bottom: 25px;
 
@@ -878,10 +913,13 @@ line-height: 24px;
     @include min($desktop) {
       width: 880px;
       margin: 0 auto;
+      margin-bottom: 30px;
     }
   }
 
   &__subtitle {
+    width: 80%;
+    margin: 0 auto;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
@@ -912,7 +950,7 @@ line-height: 24px;
     }
 
     @include min($desktop) {
-     width: 80%;
+      width: 80%;
     }
   }
 
@@ -933,7 +971,15 @@ line-height: 24px;
   }
 
   &__button {
+    display: none;
+
     @include min($tablet) {
+      margin: 0;
+      margin-left: 50px;
+      width: 430px;
+    }
+
+    @include min($desktop) {
       margin: 0;
       margin-left: 50px;
       width: 430px;
@@ -1085,7 +1131,7 @@ line-height: 24px;
       line-height: 22px;
     }
 
-    & + #tel {
+    &+#tel {
       margin-bottom: 35px;
     }
   }
@@ -1297,13 +1343,28 @@ input:focus {
     }
 
     @include min($tablet) {
+      transform: skewY(2deg);
+    }
+
+    @include min($desktop) {
       font-size: 20px;
       line-height: 24px;
       padding-left: 145px;
+      transform: skewY(1deg);
+      padding-right: 41%;
+      margin-bottom: 60px;
     }
 
     &:nth-child(odd) {
       transform: skewY(-3deg);
+
+      @include min($tablet) {
+        transform: skewY(-2deg);
+      }
+
+      @include min($desktop) {
+        transform: skewY(-1deg);
+      }
     }
 
     &::before {
@@ -1324,6 +1385,15 @@ input:focus {
         height: 150px;
         background-size: 265px;
       }
+
+      @include min($desktop) {
+        width: 209px;
+        height: 209px;
+        background-size: 360px;
+        left: 50%;
+        margin-left: 263px;
+        top: -58px;
+      }
     }
 
     &:nth-child(2) {
@@ -1332,6 +1402,11 @@ input:focus {
       @include min($tablet) {
         padding-left: 80px;
         padding-right: 225px;
+      }
+
+      @include min($desktop) {
+        padding-left: 50%;
+        padding-right: 17%;
       }
 
       &::before {
@@ -1350,6 +1425,15 @@ input:focus {
           top: -43px;
           transform: rotate(-6deg);
         }
+
+        @include min($desktop) {
+          width: 226px;
+          height: 170px;
+          left: 50%;
+          transform: translateX(-564px);
+          top: -63px;
+          background-size: 214px;
+        }
       }
     }
 
@@ -1359,6 +1443,11 @@ input:focus {
       @include min($tablet) {
         padding-left: 355px;
         padding-right: 80px;
+      }
+
+      @include min($desktop) {
+        padding-left: 22%;
+        padding-right: 50%;
       }
 
       &::before {
@@ -1376,6 +1465,11 @@ input:focus {
           background-size: 350px;
           left: 10px;
         }
+
+        @include min($desktop) {
+          left: 50%;
+          transform: translateX(-75px);
+        }
       }
     }
 
@@ -1385,6 +1479,11 @@ input:focus {
       @include min($tablet) {
         padding-left: 80px;
         padding-right: 225px;
+      }
+
+      @include min($desktop) {
+        padding-left: 50%;
+        padding-right: 17%;
       }
 
       &::before {
@@ -1404,6 +1503,15 @@ input:focus {
           right: 31px;
           top: -70px;
         }
+
+        @include min($desktop) {
+          width: 350px;
+          height: 280px;
+          left: 50%;
+          transform: translateX(-620px) rotate(-14deg);
+          top: -113px;
+          background-size: 177px;
+        }
       }
     }
 
@@ -1411,6 +1519,11 @@ input:focus {
       @include min($tablet) {
         padding-left: 215px;
         padding-right: 53px;
+      }
+
+      @include min($desktop) {
+        padding-left: 25%;
+        padding-right: 50%;
       }
 
       &::before {
@@ -1427,6 +1540,11 @@ input:focus {
           background-size: 188px;
           left: 48px;
           top: -35px;
+        }
+
+        @include min($desktop) {
+          left: 50%;
+          transform: translateX(0);
         }
       }
     }
@@ -1483,8 +1601,8 @@ input:focus {
 }
 
 .questions {
-max-width: 1070px;
-margin: 0 auto;
+  max-width: 1070px;
+  margin: 0 auto;
 
   &__title {
     padding: 0 15px;
@@ -1512,6 +1630,7 @@ margin: 0 auto;
 
     @include min($desktop) {
       width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -1522,6 +1641,8 @@ margin: 0 auto;
     border: 2px solid #424750;
     background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
     opacity: 0.9;
+
+
 
     &-title {
       position: relative;
@@ -1554,17 +1675,13 @@ margin: 0 auto;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-image: url(../img/chevron_down.svg);
-      }
-
-      &--close {
-        &::after {
-          transform: translateY(-50%) rotate(180deg);
-        }
+        transform: translateY(-50%);
+        transition: all 0.5s;
       }
     }
 
     &-text {
-      display: block;
+      display: none;
       margin: 0;
       padding: 15px;
       font-weight: normal;
@@ -1576,9 +1693,16 @@ margin: 0 auto;
         font-size: 13px;
         line-height: 16px;
       }
+    }
 
-      &--close {
-        display: none;
+    &--open {
+      & .questions__item-text {
+        display: block;
+        transition: 0.5s;
+      }
+
+      & .questions__item-title::after {
+        transform: translateY(-50%) rotate(180deg);
       }
     }
   }
