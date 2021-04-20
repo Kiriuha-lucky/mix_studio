@@ -15,12 +15,12 @@ jQuery(document).ready(function () {
     $(".page-header").toggleClass('page-header--open');
   });
 
-  $(document).click(function (e) { // событие клика по веб-документу
-    var div = $(".page-header__nav"); // тут указываем ID элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
+  $(document).click(function (e) { 
+    var div = $(".page-header__nav"); 
+    if (!div.is(e.target) 
       &&
-      div.has(e.target).length === 0) { // и не по его дочерним элементам
-      $(".page-header").removeClass('page-header--open'); // скрываем его
+      div.has(e.target).length === 0) { 
+      $(".page-header").removeClass('page-header--open'); 
     }
   });
 
