@@ -29,7 +29,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("docs/css"));
 });
 
 gulp.task("images", function () {
@@ -39,7 +39,7 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("js", function () {
@@ -48,7 +48,7 @@ gulp.task("js", function () {
     .pipe(rename(function (path) {
     path.basename += ".min";
   }))
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("docs/js"));
 });
 
 
@@ -56,14 +56,14 @@ gulp.task("html", function () {
   return gulp.src("source/*.html")
   .pipe(posthtml([include()]))
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("docs"));
 });
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/*.svg")
   .pipe(svgstore({inlineSvg: true}))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("webp", function () {
@@ -79,11 +79,11 @@ gulp.task("copy", function () {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("docs");
 });
 
 gulp.task("refresh", function (done) {
@@ -93,7 +93,7 @@ gulp.task("refresh", function (done) {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: "docs/",
     notify: false,
     open: true,
     cors: true,

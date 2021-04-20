@@ -71,7 +71,7 @@ body {
       background: transparent;
       box-shadow: 0px 0px 89px 30px rgba(245, 201, 142, 0.25);
     }
-  
+
     &:active {
       background: transparent;
       opacity: 0.4;
@@ -631,6 +631,10 @@ body {
     margin-bottom: 130px;
   }
 
+  &__slider {
+    position: relative;
+  }
+
   &__title {
     margin-bottom: 25px;
 
@@ -654,14 +658,13 @@ body {
     }
   }
 
-  &__list {
-    @include list-reset;
+  &__lists {
     display: flex;
+    width: auto;
   }
 
   &__item {
     flex-shrink: 0;
-    margin-left: 20px;
     width: 143px;
     height: 120px;
     background-color: #fff;
@@ -669,7 +672,6 @@ body {
     @include min($tablet) {
       width: 300px;
       height: 250px;
-      margin-left: 30px;
     }
   }
 }
@@ -1861,5 +1863,55 @@ input:focus {
     @include min($tablet) {
       width: 350px;
     }
+  }
+}
+
+.owl {
+  &-stage {
+    display: flex;
+  }
+
+  &-prev,
+  &-next {
+    cursor: pointer;
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+
+
+
+    @include min($desktop) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      border: 2px solid #FDD9A8;
+
+      &::hover,
+      &::focus {
+        background: linear-gradient(90deg, #D8AD78 0%, #FDD9A8 50.35%, #D1AA70 100%);
+      }
+    }
+
+    span {
+      color: #FDD9A8;
+      font-size: 25px;
+    }
+
+  }
+
+  &-prev::hover,
+  &-next::hover,
+  &-prev::focus,
+  &-next::focus {
+    background: linear-gradient(90deg, #D8AD78 0%, #FDD9A8 50.35%, #D1AA70 100%);
+  }
+
+  &-next {
+    right: 0;
   }
 }
