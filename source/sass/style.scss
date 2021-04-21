@@ -668,14 +668,10 @@ body {
     width: 143px;
     height: 120px;
     background-color: #fff;
+    display: block;
+    overflow: hidden;
 
-    &:first-child {
-      background-color: red;
-    }
 
-    &:last-child {
-      background-color: blue;
-    }
 
     @include min($tablet) {
       width: 300px;
@@ -1055,7 +1051,7 @@ body {
 
   @include min($desktop) {
     padding-bottom: 20px;
-    background-size: 90vw;
+    background-size: 80vw;
     margin-bottom: 130px;
   }
 
@@ -1578,11 +1574,10 @@ input:focus {
   }
 
   &__list {
-    @include list-reset;
     width: 100%;
     display: flex;
-
-    overflow: scroll;
+    position: relative;
+    overflow: hidden;
 
     @include min($desktop) {
       max-width: 1130px;
@@ -1691,15 +1686,17 @@ input:focus {
     }
 
     &-text {
-      display: none;
+      height: 0;
       margin: 0;
       padding: 15px;
       font-weight: normal;
       font-size: 10px;
       line-height: 12px;
+      box-sizing: border-box;
+      transition: all 0.5s;
 
       @include min($tablet) {
-        padding: 20px 30px;
+        padding: 0;
         font-size: 13px;
         line-height: 16px;
       }
@@ -1707,8 +1704,10 @@ input:focus {
 
     &--open {
       & .questions__item-text {
-        display: block;
-        transition: 0.5s;
+        padding: 20px 30px;
+        height: auto;
+
+
       }
 
       & .questions__item-title::after {
@@ -1721,6 +1720,7 @@ input:focus {
 .footer {
   background-color: #191a1e;
   padding: 50px 20px;
+  margin-top: 55px;
 
 
 
@@ -1879,18 +1879,6 @@ input:focus {
     display: flex;
   }
 
-  &-item {
-    margin-left: 15px;
-    width: 143px !important;
-    height: 120px;
-
-    @include min($tablet) {
-      margin-left: 25px;
-      width: 300px !important;
-    height: 250px;
-    }
-  }
-
   &-nav {
     display: none;
 
@@ -1941,5 +1929,9 @@ input:focus {
 
   &-next {
     right: 0;
+  }
+
+  &-prev {
+    left: 0;
   }
 }
