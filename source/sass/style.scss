@@ -669,6 +669,14 @@ body {
     height: 120px;
     background-color: #fff;
 
+    &:first-child {
+      background-color: red;
+    }
+
+    &:last-child {
+      background-color: blue;
+    }
+
     @include min($tablet) {
       width: 300px;
       height: 250px;
@@ -1869,6 +1877,26 @@ input:focus {
 .owl {
   &-stage {
     display: flex;
+  }
+
+  &-item {
+    margin-left: 15px;
+    width: 143px !important;
+    height: 120px;
+
+    @include min($tablet) {
+      margin-left: 25px;
+      width: 300px !important;
+    height: 250px;
+    }
+  }
+
+  &-nav {
+    display: none;
+
+    @include min($desktop) {
+      display: block;
+    }
   }
 
   &-prev,

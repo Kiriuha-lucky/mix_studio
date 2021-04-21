@@ -15,21 +15,19 @@ jQuery(document).ready(function () {
     $(".page-header").toggleClass('page-header--open');
   });
 
-  $(document).click(function (e) { 
-    var div = $(".page-header__nav"); 
-    if (!div.is(e.target) 
+  $(document).click(function (e) {
+    var div = $(".page-header__nav");
+    if (!div.is(e.target)
       &&
-      div.has(e.target).length === 0) { 
-      $(".page-header").removeClass('page-header--open'); 
+      div.has(e.target).length === 0) {
+      $(".page-header").removeClass('page-header--open');
     }
   });
 
   $('.owl-carousel').owlCarousel({
     loop: true,
-    items: 4,
-    margin: 15,
     autoplay: false,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
     dots: false
   });
