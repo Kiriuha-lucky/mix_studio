@@ -222,7 +222,8 @@ body {
   }
 
   &__nav-wrapper {
-    display: none;
+    // display: none;
+    opacity: 0;
     box-sizing: border-box;
     z-index: 500;
     position: absolute;
@@ -233,8 +234,9 @@ body {
     height: 100vh;
     padding: 40px 20px;
     background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
-    opacity: 0.85;
+    // opacity: 0.85;
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
+    transition: all 0.5s;
 
     @include min($tablet) {
       top: 0;
@@ -247,7 +249,8 @@ body {
   &--open {
     .page-header {
       &__nav-wrapper {
-        display: block;
+        // display: block;
+        opacity: 0.85;
       }
 
       &__nav-toggle {
