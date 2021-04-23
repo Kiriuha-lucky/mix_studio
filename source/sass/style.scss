@@ -247,7 +247,13 @@ body {
   }
 
   &--open {
+
+
+    @include min($tablet) {
+      padding-left: 50px;
+    }
     .page-header {
+
       &__nav-wrapper {
         // display: block;
         opacity: 0.85;
