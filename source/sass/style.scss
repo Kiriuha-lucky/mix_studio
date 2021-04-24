@@ -247,13 +247,10 @@ body {
   }
 
   &--open {
-
-
     @include min($tablet) {
       padding-left: 50px;
     }
     .page-header {
-
       &__nav-wrapper {
         // display: block;
         opacity: 0.85;
@@ -681,8 +678,6 @@ body {
     display: block;
     overflow: hidden;
 
-
-
     @include min($tablet) {
       width: 300px;
       height: 250px;
@@ -705,8 +700,6 @@ body {
   @include min($desktop) {
     margin-bottom: 40px;
   }
-
-
 
   &__button {
     margin-bottom: 40px;
@@ -744,7 +737,6 @@ body {
     }
 
     &__wrapper {
-
       @include min($desktop) {
         display: flex;
         justify-content: space-between;
@@ -1000,8 +992,6 @@ body {
       margin-left: 50px;
       width: 430px;
     }
-
-
   }
 
   &__picture {
@@ -1147,7 +1137,7 @@ body {
       line-height: 22px;
     }
 
-    &+#tel {
+    & + #tel {
       margin-bottom: 35px;
     }
   }
@@ -1227,7 +1217,6 @@ input:focus {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-
     }
   }
 
@@ -1307,8 +1296,6 @@ input:focus {
         display: flex;
       }
     }
-
-
   }
 }
 
@@ -1598,19 +1585,51 @@ input:focus {
   &__item {
     flex-shrink: 0;
     width: 278px;
-    height: 150px;
+    height: auto;
+    box-sizing: border-box;
     border-radius: 15px;
     margin-right: 20px;
     background-color: #fff;
+    padding: 20px;
+    color: black;
 
     @include min($tablet) {
       width: 410px;
-      height: 222px;
+      height: auto;
       margin-right: 30px;
     }
 
     &:first-child {
       margin-left: 20px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-photo {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      @include min($tablet) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-name {
+      color: #d8ad78;
+      font-weight: 700;
+      font-size: 20px;
     }
   }
 }
@@ -1656,8 +1675,6 @@ input:focus {
     border: 2px solid #424750;
     background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
     opacity: 0.9;
-
-
 
     &-title {
       position: relative;
@@ -1723,8 +1740,6 @@ input:focus {
           font-size: 13px;
           line-height: 16px;
         }
-
-
       }
 
       & .questions__item-title::after {
@@ -1739,11 +1754,8 @@ input:focus {
   padding: 50px 20px;
   margin-top: 55px;
 
-
-
   &__main-wrapper {
     position: relative;
-
 
     @include min($tablet) {
       padding: 50px 20px;
@@ -1758,8 +1770,6 @@ input:focus {
       margin: 0 auto;
     }
   }
-
-
 
   &__wrapper {
     margin-bottom: 30px;
@@ -1784,7 +1794,6 @@ input:focus {
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
-
     }
   }
 
@@ -1912,8 +1921,6 @@ input:focus {
     outline: none;
     background: none;
 
-
-
     @include min($desktop) {
       position: absolute;
       top: 50%;
@@ -1922,26 +1929,25 @@ input:focus {
       width: 40px;
       height: 40px;
       border-radius: 5px;
-      border: 2px solid #FDD9A8;
+      border: 2px solid #fdd9a8;
 
       &::hover,
       &::focus {
-        background: linear-gradient(90deg, #D8AD78 0%, #FDD9A8 50.35%, #D1AA70 100%);
+        background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%);
       }
     }
 
     span {
-      color: #FDD9A8;
+      color: #fdd9a8;
       font-size: 25px;
     }
-
   }
 
   &-prev::hover,
   &-next::hover,
   &-prev::focus,
   &-next::focus {
-    background: linear-gradient(90deg, #D8AD78 0%, #FDD9A8 50.35%, #D1AA70 100%);
+    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%);
   }
 
   &-next {

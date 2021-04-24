@@ -51,7 +51,7 @@ jQuery(document).ready(function () {
   $('#owl-carousel2').owlCarousel({
     loop: true,
     autoplay: false,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots: false,
     center: true,
