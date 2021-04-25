@@ -921,6 +921,14 @@ body {
 .profits {
   width: 100%;
 
+  @include min($tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include min($desktop) {
+    margin-bottom: 50px;
+  }
+
   &__title {
     margin-bottom: 25px;
 
