@@ -82,6 +82,39 @@ jQuery(document).ready(function () {
     });
   });
 
+  var $moneycount = function(){
+    var $slider1 = $("#slider-bar").attr('data-1');
+    var $slider2 = $("#slider-bar2").attr('data-2');
+    var $slider3 = $("#slider-bar3").attr('data-3');
+    var $money = $("#money");
+    var $english = 0;
+    var $days = 0;
+
+    if ($slider2 == 2) {
+      $english = 1.75;
+    } else if ($slider2 == 1) {
+      $english = 1.5;
+    } else {
+      $english = 1;
+    };
+    console.log(555, $english);
+
+    if ($slider3 == 3) {
+      $days = 1.5;
+    } else if ($slider3 == 2) {
+      $days = 1.25;
+    } else if ($slider3 == 1) {
+      $days = 1.1;
+    } else {
+      $days = 1;
+    };
+    console.log(666, $days);
+
+    var $sum = ($slider1+4)*45 * $english * $days;
+
+    $money.text(Math.round($sum) + " $");
+  };
+
   (function () {
     $("#slider").slider({
       value: 1,
@@ -90,12 +123,50 @@ jQuery(document).ready(function () {
       step: 1,
       create: function (event, ui) {
         $("#slider-bar").width($("#slider").slider("value") * 25 + "%");
+        $("#slider-bar").attr('data-1', $("#slider").slider("value"));
+        $moneycount();
       },
       slide: function (event, ui) {
         $("#slider-bar").width(ui.value * 25 + "%");
+        $("#slider-bar").attr('data-1', ui.value);
+        $moneycount();
       }
     });
   })();
+
+  var $slider2text = $("#language");
+  var $slider3text = $("#days");
+
+  var $slider2changetext = function (num) {
+    switch (num) {
+      case 0:
+        $slider2text.text('школьный английский');
+        break;
+      case 1:
+        $slider2text.text('английский со словарем');
+        break;
+      case 2:
+        $slider2text.text('свободно разговариваю');
+        break;
+    }
+  };
+
+  var $slider3changetext = function (num) {
+    switch (num) {
+      case 0:
+        $slider3text.text('без опыта');
+        break;
+      case 1:
+        $slider3text.text('около месяца');
+        break;
+      case 2:
+        $slider3text.text('3-6 месяцев');
+        break;
+      case 3:
+        $slider3text.text('6 и больше месяцев');
+        break;
+    }
+  };
 
   (function () {
     $("#slider2").slider({
@@ -105,9 +176,15 @@ jQuery(document).ready(function () {
       step: 1,
       create: function (event, ui) {
         $("#slider-bar2").width($("#slider2").slider("value") * 50 + "%");
+        $slider2changetext($("#slider2").slider("value"));
+        $("#slider-bar2").attr('data-2', $("#slider2").slider("value"));
+        $moneycount();
       },
       slide: function (event, ui) {
         $("#slider-bar2").width(ui.value * 50 + "%");
+        $slider2changetext(ui.value);
+        $("#slider-bar2").attr('data-2', ui.value);
+        $moneycount();
       }
     });
   })();
@@ -120,9 +197,15 @@ jQuery(document).ready(function () {
       step: 1,
       create: function (event, ui) {
         $("#slider-bar3").width($("#slider3").slider("value") * 33 + "%");
+        $slider3changetext($("#slider3").slider("value"));
+        $("#slider-bar3").attr('data-3', $("#slider3").slider("value"));
+        $moneycount();
       },
       slide: function (event, ui) {
         $("#slider-bar3").width(ui.value * 33 + "%");
+        $slider3changetext(ui.value);
+        $("#slider-bar3").attr('data-3', ui.value);
+        $moneycount();
       }
     });
   })();
