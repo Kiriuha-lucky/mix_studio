@@ -17,8 +17,7 @@ jQuery(document).ready(function () {
 
   $(document).click(function (e) {
     var div = $(".page-header__nav");
-    if (!div.is(e.target)
-      &&
+    if (!div.is(e.target) &&
       div.has(e.target).length === 0) {
       $(".page-header").removeClass('page-header--open');
     }
@@ -32,20 +31,20 @@ jQuery(document).ready(function () {
     dots: false,
     center: true,
     autoWidth: true,
-    responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
-      0:{
-          items:2,
-          margin: 20
+    responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+      0: {
+        items: 2,
+        margin: 20
       },
-      768:{
-          items:2,
-          margin: 30
+      768: {
+        items: 2,
+        margin: 30
       },
-      1290:{
-          items:6,
-          margin: 30
+      1290: {
+        items: 6,
+        margin: 30
       }
-  }
+    }
   });
 
   $('#owl-carousel2').owlCarousel({
@@ -57,29 +56,77 @@ jQuery(document).ready(function () {
     center: true,
     autoWidth: true,
     nav: false,
-    responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
-      0:{
-          items:3,
-          margin: 20
+    responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+      0: {
+        items: 3,
+        margin: 20
       },
-      768:{
-          items:2,
-          margin: 30
+      768: {
+        items: 2,
+        margin: 30
       },
-      1290:{
-          items:3,
-          margin: 30
+      1290: {
+        items: 3,
+        margin: 30
       }
-  }
+    }
   });
 
-  $(function(){
-    $("a[href^='#']").click(function(){
-            var _href = $(this).attr("href");
-            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-            return false;
+  $(function () {
+    $("a[href^='#']").click(function () {
+      var _href = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(_href).offset().top + "px"
+      });
+      return false;
     });
-});
+  });
+
+  (function () {
+    $("#slider").slider({
+      value: 1,
+      min: 0,
+      max: 4,
+      step: 1,
+      create: function (event, ui) {
+        $("#slider-bar").width($("#slider").slider("value") * 25 + "%");
+      },
+      slide: function (event, ui) {
+        $("#slider-bar").width(ui.value * 25 + "%");
+      }
+    });
+  })();
+
+  (function () {
+    $("#slider2").slider({
+      value: 1,
+      min: 0,
+      max: 2,
+      step: 1,
+      create: function (event, ui) {
+        $("#slider-bar2").width($("#slider2").slider("value") * 50 + "%");
+      },
+      slide: function (event, ui) {
+        $("#slider-bar2").width(ui.value * 50 + "%");
+      }
+    });
+  })();
+
+  (function () {
+    $("#slider3").slider({
+      value: 1,
+      min: 0,
+      max: 3,
+      step: 1,
+      create: function (event, ui) {
+        $("#slider-bar3").width($("#slider3").slider("value") * 33 + "%");
+      },
+      slide: function (event, ui) {
+        $("#slider-bar3").width(ui.value * 33 + "%");
+      }
+    });
+  })();
+
 
 
 

@@ -251,6 +251,7 @@ body {
     @include min($tablet) {
       padding-left: 50px;
     }
+
     .page-header {
       &__nav-wrapper {
         // display: block;
@@ -1155,7 +1156,7 @@ body {
       line-height: 22px;
     }
 
-    & + #tel {
+    &+#tel {
       margin-bottom: 35px;
     }
   }
@@ -1980,9 +1981,61 @@ input:focus {
 }
 
 .owl-prev::hover,
-  .owl-next::hover,
-  .owl-prev::focus,
-  .owl-next::focus {
-    color: red;
-    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+.owl-next::hover,
+.owl-prev::focus,
+.owl-next::focus {
+  color: red;
+  background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+}
+
+
+.ui-slider-handle {
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -.6em;
+  position: absolute;
+  z-index: 2;
+  touch-action: none;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(140deg, #141515 14.75%, #2e3236 84.81%);
+  border: 1px solid #282b2e;
+  box-sizing: border-box;
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%);
+    box-shadow: 0px 3px 25px rgba(28, 21, 20, 0.25);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
   }
+
+}
+
+.ui-widget-content {
+  position: relative;
+  height: 6px;
+  background: #202226;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.75), inset -2px -2px 2px #4e5154;
+  border-radius: 100px;
+
+  .slider-bar {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%);
+    box-shadow: 0px 3px 25px rgba(28, 21, 20, 0.25);
+    border-radius: 5px;
+  }
+}
