@@ -614,10 +614,92 @@ body {
       background-position: center center;
       background-size: 30px, auto;
 
+
+
       @include min($tablet) {
         width: 80px;
         height: 80px;
         background-size: 50px, auto;
+      }
+
+
+    }
+
+    &--graph {
+      &::before {
+        background: url(../img/icon-calendar.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--office {
+      &::before {
+        background: url(../img/icon-internet.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--curator {
+      &::before {
+        background: url(../img/icon-branching.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px, auto;
+
+      @include min($tablet) {
+        background-size: 50px, auto;
+      }
+      }
+    }
+
+    &--money {
+      &::before {
+        background: url(../img/icon-pay-day.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px, auto;
+
+      @include min($tablet) {
+        background-size: 50px, auto;
+      }
+      }
+    }
+
+    &--room {
+      &::before {
+        background: url(../img/icon-room.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px, auto;
+
+      @include min($tablet) {
+        background-size: 50px, auto;
+      }
+      }
+    }
+
+    &--fine {
+      &::before {
+        background: url(../img/icon-insurance.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px, auto;
+
+      @include min($tablet) {
+        background-size: 50px, auto;
+      }
       }
     }
 
