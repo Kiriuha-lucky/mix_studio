@@ -1477,26 +1477,26 @@ input:focus {
       position: absolute;
       width: 87px;
       height: 87px;
-      background-image: url(../img/6.svg);
+      background-image: url(../img/6.png);
       background-repeat: no-repeat;
       top: -25px;
       left: 55px;
-      background-size: 150px;
+      background-size: 120px;
       background-position: 50% 50%;
 
       @include min($tablet) {
         width: 150px;
         height: 150px;
-        background-size: 265px;
+        background-size: 208px;
       }
 
       @include min($desktop) {
         width: 209px;
         height: 209px;
-        background-size: 360px;
+        background-size: 250px;
         left: 50%;
         margin-left: 263px;
-        top: -58px;
+        top: -85px;
       }
     }
 
@@ -1520,14 +1520,14 @@ input:focus {
         top: -85px;
         right: 0;
         background-size: 150px;
-        background-image: url(../img/graph.svg);
+        background-image: url(../img/graph.png);
 
         @include min($tablet) {
           width: 206px;
           height: 150px;
           background-size: 200px;
-          top: -43px;
-          transform: rotate(-6deg);
+          top: -65px;
+          transform: rotate(-2deg);
         }
 
         @include min($desktop) {
@@ -1535,8 +1535,8 @@ input:focus {
           height: 170px;
           left: 50%;
           transform: translateX(-564px);
-          top: -63px;
-          background-size: 214px;
+          top: -75px;
+          background-size: 236px;
         }
       }
     }
@@ -1561,7 +1561,7 @@ input:focus {
         top: -85px;
         right: 50px;
         background-size: 192px;
-        background-image: url(../img/map.svg);
+        background-image: url(../img/map.png);
 
         @include min($tablet) {
           width: 336px;
@@ -1597,13 +1597,13 @@ input:focus {
         top: -100px;
         right: 0;
         background-size: 130px;
-        background-image: url(../img/yes.svg);
+        background-image: url(../img/yes.png);
 
         @include min($tablet) {
           width: 154px;
           height: 164px;
           background-size: 160px;
-          transform: rotate(-18deg);
+          transform: rotate(0deg);
           right: 31px;
           top: -70px;
         }
@@ -1612,8 +1612,8 @@ input:focus {
           width: 350px;
           height: 280px;
           left: 50%;
-          transform: translateX(-620px) rotate(-14deg);
-          top: -113px;
+          transform: translateX(-620px) rotate(0deg);
+          top: -123px;
           background-size: 177px;
         }
       }
@@ -1636,7 +1636,7 @@ input:focus {
         left: 4px;
         top: -73px;
         background-size: 110px;
-        background-image: url(../img/prize.svg);
+        background-image: url(../img/prize.png);
 
         @include min($tablet) {
           width: 182px;
@@ -1649,6 +1649,7 @@ input:focus {
         @include min($desktop) {
           left: 50%;
           transform: translateX(0);
+          top: -48px;
         }
       }
     }

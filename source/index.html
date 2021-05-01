@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <link type="image/x-icon" rel="icon" href="img/fav.ico">
@@ -13,6 +14,7 @@
   <title>MIX Studio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body>
   <div class="container">
     <header class="page-header">
@@ -357,13 +359,14 @@
           </ul>
         </section>
         <section class="write" id="write">
-          <form action="" class="write__form">
+          <form action="https://formspree.io/f/xbjqdyga" method="POST" class="write__form">
             <h2 class="title write__title">Напиши нам</h2>
             <h3 class="write__subtitle">И наши администраторы свяжутся
               с тобой в ближайшее время</h3>
-            <input class="write__input" type="text" id="name" name="form-type" placeholder="Имя">
-            <input class="write__input" type="number" id="age" name="form-type" placeholder="18">
-            <input class="write__input" type="tel" id="tel" name="form-type" placeholder="Номер телефона">
+            <input class="write__input" type="text" id="name" name="name" placeholder="Имя" required>
+            <input class="write__input" type="number" id="age" name="age" placeholder="18" required>
+            <input class="write__input" type="tel" id="phone" name="phone" placeholder="8 (999) 999-99-99"
+              required>
             <button class="button write__button" type="submit">Позвоните мне</button>
             <p class="write__text write__text--tablet">Нажимая на кнопку, я даю свое согласие на обработку персональных
               данных</p>
@@ -479,11 +482,7 @@
       </footer>
     </main>
   </div>
-  <script src="./js/jquery-3.6.0.min.min.js"></script>
-  <script src="./js/script.min.js"></script>
-  <script src="./js/owl.carousel.min.min.js"></script>
-  <script src="./js/jquery-ui.min.js"></script>
-  <script type='text/javascript'>
+  <script>
     (function () {
       var s = document['createElement']('script');
       s.type = 'text/javascript';
@@ -498,8 +497,14 @@
         document.documentElement.firstChild.appendChild(s);
       };
     })();
-
   </script>
+
+  <script src="./js/jquery-3.6.0.min.min.js"></script>
+  <script src="./js/owl.carousel.min.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/jquery.maskedinput.min.js"></script>
+  <script src="./js/script.min.js"></script>
+
 </body>
 
 </html>

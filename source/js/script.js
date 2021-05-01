@@ -31,7 +31,7 @@ jQuery(document).ready(function () {
     dots: false,
     center: true,
     autoWidth: true,
-    responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+    responsive: {
       0: {
         items: 2,
         margin: 20
@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
     center: true,
     autoWidth: true,
     nav: false,
-    responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+    responsive: {
       0: {
         items: 3,
         margin: 20
@@ -97,7 +97,6 @@ jQuery(document).ready(function () {
     } else {
       $english = 1;
     };
-    console.log(555, $english);
 
     if ($slider3 == 3) {
       $days = 1.5;
@@ -108,8 +107,6 @@ jQuery(document).ready(function () {
     } else {
       $days = 1;
     };
-    console.log(666, $days);
-
     var $sum = ($slider1+4)*45 * $english * $days;
 
     $money.text(Math.round($sum) + " $");
@@ -209,4 +206,6 @@ jQuery(document).ready(function () {
       }
     });
   })();
+
+  $("#phone").mask("8 (999) 999-99-99");
 });
