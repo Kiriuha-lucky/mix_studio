@@ -148,22 +148,22 @@ jQuery(document).ready(function () {
     }
   };
 
-  var $slider3changetext = function (num) {
-    switch (num) {
-      case 0:
-        $slider3text.text('без опыта');
-        break;
-      case 1:
-        $slider3text.text('около месяца');
-        break;
-      case 2:
-        $slider3text.text('3-6 месяцев');
-        break;
-      case 3:
-        $slider3text.text('6 и больше месяцев');
-        break;
-    }
-  };
+  // var $slider3changetext = function (num) {
+  //   switch (num) {
+  //     case 0:
+  //       $slider3text.text('без опыта');
+  //       break;
+  //     case 1:
+  //       $slider3text.text('около месяца');
+  //       break;
+  //     case 2:
+  //       $slider3text.text('3-6 месяцев');
+  //       break;
+  //     case 3:
+  //       $slider3text.text('6 и больше месяцев');
+  //       break;
+  //   }
+  // };
 
   (function () {
     $("#slider2").slider({
@@ -194,13 +194,13 @@ jQuery(document).ready(function () {
       step: 1,
       create: function (event, ui) {
         $("#slider-bar3").width($("#slider3").slider("value") * 33 + "%");
-        $slider3changetext($("#slider3").slider("value"));
+        // $slider3changetext($("#slider3").slider("value"));
         $("#slider-bar3").attr('data-3', $("#slider3").slider("value"));
         $moneycount();
       },
       slide: function (event, ui) {
         $("#slider-bar3").width(ui.value * 33 + "%");
-        $slider3changetext(ui.value);
+        // $slider3changetext(ui.value);
         $("#slider-bar3").attr('data-3', ui.value);
         $moneycount();
       }
@@ -208,4 +208,6 @@ jQuery(document).ready(function () {
   })();
 
   $("#phone").mask("8 (999) 999-99-99");
+
+
 });

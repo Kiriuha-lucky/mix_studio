@@ -614,15 +614,11 @@ body {
       background-position: center center;
       background-size: 30px, auto;
 
-
-
       @include min($tablet) {
         width: 80px;
         height: 80px;
         background-size: 50px, auto;
       }
-
-
     }
 
     &--graph {
@@ -655,12 +651,12 @@ body {
       &::before {
         background: url(../img/icon-branching.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
         background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 30px, auto;
+        background-position: center center;
+        background-size: 30px, auto;
 
-      @include min($tablet) {
-        background-size: 50px, auto;
-      }
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
       }
     }
 
@@ -668,12 +664,12 @@ body {
       &::before {
         background: url(../img/icon-pay-day.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
         background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 30px, auto;
+        background-position: center center;
+        background-size: 30px, auto;
 
-      @include min($tablet) {
-        background-size: 50px, auto;
-      }
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
       }
     }
 
@@ -681,12 +677,12 @@ body {
       &::before {
         background: url(../img/icon-room.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
         background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 30px, auto;
+        background-position: center center;
+        background-size: 30px, auto;
 
-      @include min($tablet) {
-        background-size: 50px, auto;
-      }
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
       }
     }
 
@@ -694,12 +690,12 @@ body {
       &::before {
         background: url(../img/icon-insurance.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
         background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 30px, auto;
+        background-position: center center;
+        background-size: 30px, auto;
 
-      @include min($tablet) {
-        background-size: 50px, auto;
-      }
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
       }
     }
 
@@ -860,6 +856,36 @@ body {
       color: #7c7c7c;
     }
 
+    &-scale__numbers-item--work {
+      text-align: center;
+      font-size: 12px;
+
+      @include min($tablet) {
+        font-size: 14px;
+        width: 25%;
+      }
+
+      @include min($desktop) {
+        width: 25%;
+      }
+
+      &:first-child {
+        text-align: left;
+
+        @include min($tablet) {
+          width: 16%;
+        }
+      }
+
+      &:last-child {
+        text-align: right;
+
+        @include min($tablet) {
+          width: 17%;
+        }
+      }
+    }
+
     &-scale__line {
       position: relative;
       width: 100%;
@@ -956,7 +982,7 @@ body {
   &__sum {
     margin: 0 auto;
     display: block;
-    padding: 14px 60px;
+    padding: 14px 50px;
 
     background: #ffffff;
     box-shadow: inset 0px 7px 10px rgba(0, 0, 0, 0.2);
@@ -1100,6 +1126,11 @@ body {
     bottom: -3px;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 10px;
+
+    &--tropic {
+      width: 100%;
+    }
 
     &--car,
     &--flat {
@@ -1238,7 +1269,7 @@ body {
       line-height: 22px;
     }
 
-    &+#tel {
+    & + #tel {
       margin-bottom: 35px;
     }
   }
@@ -1685,7 +1716,6 @@ input:focus {
   }
 
   &__item {
-    display: flex;
     width: 278px;
     height: auto;
     border-radius: 15px;
@@ -2071,11 +2101,10 @@ input:focus {
   background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
 }
 
-
 .ui-slider-handle {
   top: 50%;
   transform: translateY(-50%);
-  margin-left: -.6em;
+  margin-left: -0.6em;
   position: absolute;
   z-index: 2;
   touch-action: none;
@@ -2103,7 +2132,6 @@ input:focus {
     border-radius: 5px;
     transform: translate(-50%, -50%);
   }
-
 }
 
 .ui-widget-content {
