@@ -208,6 +208,5 @@ jQuery(document).ready(function () {
   })();
 
   $("#phone").mask("8 (999) 999-99-99");
-
-
+  $('.lazy').Lazy();
 });
