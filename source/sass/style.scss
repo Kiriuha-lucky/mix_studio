@@ -284,11 +284,12 @@ body {
   background-repeat: space;
 
   @include min($tablet) {
-    background-size: 700px;
+    background-size: 1350px;
     min-height: 650px;
     margin-top: -90px;
     padding-top: 125px;
     margin-bottom: 0;
+    background-repeat: space;
   }
 
   @include min($desktop) {
