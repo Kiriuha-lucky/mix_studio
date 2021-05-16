@@ -130,7 +130,6 @@ body {
   background-color: black;
   margin: 0 auto;
 
-
   &__scroll {
     position: fixed;
     // top: 0;
@@ -146,7 +145,7 @@ body {
     z-index: 500;
 
     &__scroll {
-      background: rgba(0,0,0, 0.85);
+      background: rgba(0, 0, 0, 0.85);
     }
   }
 
@@ -156,10 +155,10 @@ body {
     max-width: 1290px;
     margin: 0 auto;
     display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
   }
 
   &__logo-image {
@@ -273,7 +272,6 @@ body {
         padding-left: 50px;
       }
     }
-
 
     .page-header {
       &__nav-toggle {
