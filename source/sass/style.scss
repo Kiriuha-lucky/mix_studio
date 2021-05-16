@@ -121,6 +121,7 @@ body {
   }
 
   @include min($desktop) {
+    position: relative;
     width: 100%;
   }
 }
@@ -227,7 +228,7 @@ body {
     height: 0;
     opacity: 0;
     box-sizing: border-box;
-    z-index: -100;
+    z-index: -1500;
     position: absolute;
     flex-direction: column;
     left: 0;
@@ -246,6 +247,8 @@ body {
       height: auto;
     }
   }
+
+
 
   &--open {
     @include min($tablet) {
