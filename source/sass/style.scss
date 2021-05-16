@@ -111,7 +111,6 @@ body {
 
 .container {
   margin: 0 auto;
-  // outline: 2px solid green;
   min-width: 320px;
   width: 100%;
   overflow: hidden;
@@ -156,6 +155,7 @@ body {
 
     @include min($tablet) {
       display: block;
+      width: auto;
     }
   }
 
@@ -225,8 +225,7 @@ body {
 
   &__nav-wrapper {
     // display: none;
-    height: 0;
-    opacity: 0;
+    opacity: 85%;
     box-sizing: border-box;
     z-index: -1500;
     position: absolute;
@@ -256,12 +255,12 @@ body {
     }
 
     .page-header {
-      &__nav-wrapper {
-        // display: block;
-        // height: auto;
-        opacity: 0.85;
-        z-index: 500;
-      }
+      // &__nav-wrapper {
+      //   // display: block;
+      //   // height: auto;
+      //   opacity: 0.85;
+      //   z-index: 500;
+      // }
 
       &__nav-toggle {
         transform: rotate(90deg);

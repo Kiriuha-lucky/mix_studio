@@ -2,8 +2,10 @@
 
 
 jQuery(document).ready(function () {
+  $(".page-header__nav-wrapper").fadeOut();
   $(".page-header__nav-toggle").click(function (e) {
     $(".page-header").toggleClass('page-header--open');
+    $(".page-header__nav-wrapper").fadeToggle();
   });
 
   $(".questions__item").bind('click', function (e) {
@@ -13,6 +15,7 @@ jQuery(document).ready(function () {
 
   $(".page-header__nav-list a").click(function (e) {
     $(".page-header").toggleClass('page-header--open');
+    $(".page-header__nav-wrapper").fadeOut();
   });
 
   $(document).click(function (e) {
@@ -20,6 +23,7 @@ jQuery(document).ready(function () {
     if (!div.is(e.target) &&
       div.has(e.target).length === 0) {
       $(".page-header").removeClass('page-header--open');
+      $(".page-header__nav-wrapper").fadeOut();
     }
   });
 
