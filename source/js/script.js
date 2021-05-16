@@ -86,7 +86,7 @@ jQuery(document).ready(function () {
     });
   });
 
-  var $moneycount = function(){
+  var $moneycount = function () {
     var $slider1 = $("#slider-bar").attr('data-1');
     var $slider2 = $("#slider-bar2").attr('data-2');
     var $slider3 = $("#slider-bar3").attr('data-3');
@@ -111,7 +111,7 @@ jQuery(document).ready(function () {
     } else {
       $days = 1;
     };
-    var $sum = ($slider1+4)*45 * $english * $days;
+    var $sum = ($slider1 + 4) * 45 * $english * $days;
 
     $money.text(Math.round($sum) + " $");
   };
@@ -213,4 +213,16 @@ jQuery(document).ready(function () {
 
   $("#phone").mask("8 (999) 999-99-99");
   $('.lazy').Lazy();
+
+  function toggleHeader() {
+    var scroll_status = $(document).scrollTop();
+    if (scroll_status > 0)
+      $(".page-header").addClass("page-header__scroll");
+    else
+      $(".page-header").removeClass("page-header__scroll");
+  };
+
+  $(document).scroll(function () {
+    toggleHeader();
+  });
 });

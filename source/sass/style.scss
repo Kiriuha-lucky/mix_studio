@@ -127,19 +127,39 @@ body {
 
 .page-header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
   background-color: black;
-  width: 100%;
-  max-width: 1290px;
   margin: 0 auto;
-  box-sizing: border-box;
+
+
+  &__scroll {
+    position: fixed;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+    z-index: 500;
+    width: 100%;
+    background: black;
+  }
 
   @include min($tablet) {
     background: transparent;
     z-index: 500;
+
+    &__scroll {
+      background: rgba(0,0,0, 0.85);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-sizing: border-box;
   }
 
   &__logo-image {
@@ -227,7 +247,6 @@ body {
     // display: none;
     opacity: 85%;
     box-sizing: border-box;
-    z-index: -1500;
     position: absolute;
     flex-direction: column;
     left: 0;
@@ -238,6 +257,7 @@ body {
     background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
     transition: all 0.5s;
+    z-index: 500;
 
     @include min($tablet) {
       top: 0;
@@ -247,15 +267,15 @@ body {
     }
   }
 
-
-
   &--open {
-    @include min($tablet) {
-      padding-left: 50px;
+    .page-header__wrapper {
+      @include min($tablet) {
+        padding-left: 50px;
+      }
     }
 
-    .page-header {
 
+    .page-header {
       &__nav-toggle {
         transform: rotate(90deg);
 
@@ -1096,7 +1116,6 @@ body {
     }
 
     &--button {
-
       @include min($tablet) {
         align-self: flex-start;
         margin-top: 53px;
