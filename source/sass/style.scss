@@ -255,12 +255,6 @@ body {
     }
 
     .page-header {
-      // &__nav-wrapper {
-      //   // display: block;
-      //   // height: auto;
-      //   opacity: 0.85;
-      //   z-index: 500;
-      // }
 
       &__nav-toggle {
         transform: rotate(90deg);
@@ -600,6 +594,7 @@ body {
 
     @include min($desktop) {
       width: 410px;
+      max-height: 85px;
     }
 
     &::before {
@@ -709,6 +704,7 @@ body {
 
       @include min($desktop) {
         margin-left: -65px;
+        min-height: 85px;
       }
     }
   }
