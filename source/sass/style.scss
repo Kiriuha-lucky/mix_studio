@@ -1036,8 +1036,11 @@ body {
   }
 
   &__wrapper {
+    margin-bottom: 10px;
+
     @include min($tablet) {
       margin: 0 auto;
+      margin-bottom: 20px;
       display: flex;
       width: 100%;
       justify-content: space-between;

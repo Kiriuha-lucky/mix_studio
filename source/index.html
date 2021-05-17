@@ -217,11 +217,11 @@
               <h3 class="calculation__title">Количество смен в неделю</h3>
               <div class="calculation__scale">
                 <ul class="calculation-scale__numbers-list">
-                  <li class="calculation-scale__numbers-item">1</li>
-                  <li class="calculation-scale__numbers-item">2</li>
                   <li class="calculation-scale__numbers-item">3</li>
                   <li class="calculation-scale__numbers-item">4</li>
                   <li class="calculation-scale__numbers-item">5</li>
+                  <li class="calculation-scale__numbers-item">6</li>
+                  <li class="calculation-scale__numbers-item">7</li>
                 </ul>
                 <div class="calculation-scale__line">
                   <div id="slider">
@@ -237,6 +237,8 @@
                   <li class="calculation-scale__numbers-item">1</li>
                   <li class="calculation-scale__numbers-item">2</li>
                   <li class="calculation-scale__numbers-item">3</li>
+                  <li class="calculation-scale__numbers-item">4</li>
+                  <li class="calculation-scale__numbers-item">5</li>
 
                 </ul>
                 <div class="calculation-scale__line">
@@ -251,10 +253,11 @@
               <h3 class="calculation__title">Опыт работы месяцев</h3>
               <div class="calculation__scale">
                 <ul class="calculation-scale__numbers-list">
-                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">Не <br>работала</li>
-                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">1-3 <br>месяца</li>
-                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">3-6 <br>месяцев</li>
-                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">> 6 <br>месяцев</li>
+                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">Отсутствует</li>
+                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">1-3 </li>
+                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">3-6 </li>
+                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">6-9 </li>
+                  <li class="calculation-scale__numbers-item calculation-scale__numbers-item--work">> 9 </li>
 
                 </ul>
                 <div class="calculation-scale__line">
@@ -262,14 +265,22 @@
                     <div id="slider-bar3" class="slider-bar" data-3=""></div>
                   </div>
                 </div>
-                <!-- <p id="days" class="calculation-scale__text">своободно разговариваю</p> -->
+                <p id="days" class="calculation-scale__text"></p>
               </div>
             </div>
           </div>
           <div class="result">
             <div class="result__wrapper">
-              <h3 class="result__title">Итог расчета</h3>
-              <p id="money" class="result__sum">1000$</p>
+              <h3 class="result__title result__title--week">За неделю</h3>
+              <p id="money--week" class="result__sum">1000$</p>
+            </div>
+            <div class="result__wrapper">
+              <h3 class="result__title result__title--month">За месяц</h3>
+              <p id="money--month" class="result__sum">1000$</p>
+            </div>
+            <div class="result__wrapper">
+              <h3 class="result__title result__title--year">За год</h3>
+              <p id="money--year" class="result__sum">1000$</p>
             </div>
 
             <p class="result__text">Данные взяты из реальной статистики наших моделей
