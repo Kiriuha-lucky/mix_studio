@@ -107,7 +107,7 @@ jQuery(document).ready(function () {
       $english = 1;
     };
 
-     if ($slider3 == 4) {
+    if ($slider3 == 4) {
       $days = 1.5;
     } else if ($slider3 == 3) {
       $days = 1.35;
@@ -168,23 +168,6 @@ jQuery(document).ready(function () {
         break;
     }
   };
-
-  // var $slider3changetext = function (num) {
-  //   switch (num) {
-  //     case 0:
-  //       $slider3text.text('без опыта');
-  //       break;
-  //     case 1:
-  //       $slider3text.text('около месяца');
-  //       break;
-  //     case 2:
-  //       $slider3text.text('3-6 месяцев');
-  //       break;
-  //     case 3:
-  //       $slider3text.text('6 и больше месяцев');
-  //       break;
-  //   }
-  // };
 
   (function () {
     $("#slider2").slider({
