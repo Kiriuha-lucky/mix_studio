@@ -210,7 +210,7 @@ jQuery(document).ready(function () {
   var $slider3changetext = function (num) {
     switch (num) {
       case 0:
-        $slider3text.text('    ');
+        $slider3text.text('нет опыта');
         break;
       default:
         $slider3text.text('месяцев');
