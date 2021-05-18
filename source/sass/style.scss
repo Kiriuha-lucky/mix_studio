@@ -605,9 +605,10 @@ body {
     min-height: 60px;
 
     @include min($tablet) {
+      box-sizing: border-box;
       padding-left: 90px;
       width: 340px;
-      min-height: 80px;
+      height: 85px;
     }
 
     @include min($desktop) {
@@ -719,6 +720,12 @@ body {
 
     &--button {
       padding: 0;
+
+      @include min($tablet) {
+        box-sizing: border-box;
+        min-height: 85px;
+        padding-top: 11px;
+      }
 
       @include min($desktop) {
         margin-left: -65px;

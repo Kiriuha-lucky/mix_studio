@@ -79,7 +79,7 @@ jQuery(document).ready(function () {
     $("a[href^='#']").click(function () {
       var _href = $(this).attr("href");
       $("html, body").animate({
-        scrollTop: $(_href).offset().top + "px"
+        scrollTop: $(_href).offset().top - 200 + "px"
       });
       return false;
     });
@@ -96,35 +96,35 @@ jQuery(document).ready(function () {
     var $days = 0;
 
     if ($slider2 == 4) {
-      $english = 1.5;
+      $english = 1.2;
     } else if ($slider2 == 3) {
-      $english = 1.35;
+      $english = 1.15;
     } else if ($slider2 == 2) {
-      $english = 1.225;
-    } else if ($slider2 == 1) {
       $english = 1.1;
+    } else if ($slider2 == 1) {
+      $english = 1.05;
     } else {
       $english = 1;
     };
 
     if ($slider3 == 4) {
-      $days = 1.5;
+      $days = 1.2;
     } else if ($slider3 == 3) {
-      $days = 1.35;
+      $days = 1.15;
     } else if ($slider3 == 2) {
-      $days = 1.225;
-    } else if ($slider3 == 1) {
       $days = 1.1;
+    } else if ($slider3 == 1) {
+      $days = 1.05;
     } else {
       $days = 1;
     };
-    var $sum__week = ($slider1 + 3) * 75 * $english * $days;
-    var $sum__month = $sum__week * 4.3;
-    var $sum__year = $sum__month * 12;
+    var $sum__week = Math.round(($slider1 + 3) * 75 * $english * $days);
+    var $sum__month = Math.round($sum__week * 4.3);
+    var $sum__year = Math.round($sum__month * 12);
 
-    $money__week.text(Math.round($sum__week) + " $");
-    $money__month.text(Math.round($sum__month) + " $");
-    $money__year.text(Math.round($sum__year) + " $");
+    $money__week.text(($sum__week) + " $");
+    $money__month.text(($sum__month) + " $");
+    $money__year.text(($sum__year) + " $");
   };
 
   (function () {
