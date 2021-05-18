@@ -26,6 +26,22 @@ jQuery(document).ready(function () {
     }
   });
 
+  $("#politic").click(function (e) {
+    $(".popup").addClass('popup--open');
+  });
+
+  $("#popup__close").click(function (e) {
+    $(".popup").removeClass('popup--open');
+  });
+
+  $(document).click(function (e) {
+    var div = $("#popup");
+    if (!div.is(e.target) &&
+      div.has(e.target).length === 0) {
+      $(".popup").removeClass('popup--open');
+    }
+  });
+
   $('#owl-carousel').owlCarousel({
     loop: true,
     autoplay: true,
@@ -84,6 +100,8 @@ jQuery(document).ready(function () {
       return false;
     });
   });
+
+
 
   var $moneycount = function () {
     var $slider1 = $("#slider-bar").attr('data-1');
