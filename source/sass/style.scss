@@ -903,30 +903,28 @@ body {
     &-scale__numbers-item--work {
       text-align: center;
       font-size: 12px;
+      width: 23px;
 
       @include min($tablet) {
         font-size: 14px;
-        width: 25%;
+        width: auto;
       }
 
       @include min($desktop) {
-        width: 25%;
+        width: auto;
       }
 
       &:first-child {
         text-align: left;
+        width: 15px;
 
         @include min($tablet) {
-          width: 16%;
+          width: auto;
         }
       }
 
       &:last-child {
         text-align: right;
-
-        @include min($tablet) {
-          width: 17%;
-        }
       }
     }
 
