@@ -30,6 +30,23 @@ body {
   background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
 }
 
+.body__block {
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100vw !important;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1400;
+  }
+}
+
 .button {
   margin: 0 auto;
   text-decoration: none;
@@ -162,6 +179,7 @@ body {
   }
 
   &__logo-image {
+    cursor: pointer;
     width: 85px;
 
     @include min($tablet) {
@@ -1950,6 +1968,7 @@ input:focus {
   }
 
   &__logo-image {
+    cursor: pointer;
     display: none;
 
     @include min($tablet) {
@@ -2145,6 +2164,9 @@ input:focus {
   z-index: 1500;
   height: 100%;
   overflow-y: scroll;
+  border: 3px solid #d8ad78;
+
+  
   
   @include min($desktop) {
     width: 75%;
