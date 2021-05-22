@@ -52,26 +52,25 @@ jQuery(document).ready(function () {
     autoplayHoverPause: true,
     dots: false,
     center: true,
-    autoWidth: true,
     responsive: {
       0: {
-        items: 2,
-        margin: 20
+        items: 1,
+        margin: 0
       },
       768: {
-        items: 2,
-        margin: 30
+        items: 1,
+        margin: 0
       },
       1290: {
-        items: 6,
-        margin: 30
+        items: 1,
+        margin: 0
       }
     }
   });
 
   $('#owl-carousel2').owlCarousel({
     loop: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots: false,

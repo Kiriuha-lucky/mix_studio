@@ -42,7 +42,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1400;
   }
 }
@@ -762,8 +762,26 @@ body {
     margin-bottom: 130px;
   }
 
+  &__wrapper {
+    @include min($desktop) {
+      margin: 0 auto;
+      margin-top: 0;
+      display: flex;
+      flex-direction: row;
+      max-width: 1290px;
+      box-sizing: border-box;
+    }
+  }
+
   &__slider {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    @include min($desktop) {
+      width: 750px;
+      flex-shrink: 0;
+    }
   }
 
   &__title {
@@ -783,34 +801,37 @@ body {
     text-align: center;
 
     @include min($desktop) {
-      width: 910px;
-      margin: 0 auto;
-      margin-bottom: 40px;
+      width: 300px;
+
+      margin-left: 50px;
+      text-align: left;
+
+      font-size: 22px;
+      line-height: 27px;
     }
   }
 
-  &__lists {
+  &__list {
     display: flex;
-    width: auto;
+    width: 100%;
   }
 
   &__item {
-    flex-shrink: 0;
-    width: 143px;
-    height: 90px;
+    width: 100%;
+    height: auto;
     background-color: #fff;
-    display: block;
+    display: flex;
     overflow: hidden;
 
-    @include min($tablet) {
-      width: 300px;
-      height: 195px;
-    }
+    // @include min($tablet) {
+    //   width: 300px;
+    //   height: 195px;
+    // }
 
-    @include min($desktop) {
-      width: 400px;
-      height: 260px;
-    }
+    // @include min($desktop) {
+    //   width: 400px;
+    //   height: 260px;
+    // }
   }
 
   &__img {
@@ -2150,11 +2171,21 @@ input:focus {
   }
 }
 
+// #owl-carousel {
+//   .owl-stage-outer {
+//     .owl-stage {
+//       .owl-item {
+//         width: 100% !important;
+//       }
+//     }
+//   }
+// }
+
 .popup {
   display: none;
   box-sizing: border-box;
   padding: 15px;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -2164,8 +2195,6 @@ input:focus {
   overflow-y: scroll;
   border: 3px solid #d8ad78;
 
-  
-  
   @include min($desktop) {
     width: 75%;
     padding: 25px;
@@ -2189,14 +2218,14 @@ input:focus {
     right: 10px;
     top: 10px;
     width: 30px;
-    height: 30px; 
+    height: 30px;
     cursor: pointer;
 
     @include min($tablet) {
       right: 20px;
-    top: 20px;
-    width: 40px;
-    height: 40px; 
+      top: 20px;
+      width: 40px;
+      height: 40px;
     }
 
     &::after,
@@ -2208,8 +2237,6 @@ input:focus {
       background-color: #d8ad78;
       left: 50%;
       top: 50%;
-
-      
     }
 
     &::after {
@@ -2289,5 +2316,3 @@ input:focus {
     border-radius: 5px;
   }
 }
-
-
