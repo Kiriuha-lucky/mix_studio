@@ -1553,6 +1553,13 @@ input:focus {
 
     @include min($desktop) {
       margin-bottom: 25px;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &--check {
+        border: 2px solid #57514a;
+      }
     }
   }
 
@@ -1563,8 +1570,8 @@ input:focus {
     height: 150px;
     margin: 0 auto;
     margin-bottom: 25px;
-    background-color: red;
     overflow: hidden;
+    object-fit: cover;
 
     @include min($tablet) {
       margin: 0;
@@ -1609,7 +1616,7 @@ input:focus {
       display: flex;
       flex-direction: row;
       width: 800px;
-      align-items: center;
+      overflow: hidden;
     }
   }
 
@@ -1617,11 +1624,23 @@ input:focus {
     display: none;
 
     @include min($desktop) {
+      position: relative;
       display: block;
       flex-shrink: 0;
       width: 50%;
       height: 500px;
       background-color: #fff;
+      // overflow: hidden;
+
+      .steps__item-image {
+        display: block;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
     }
   }
 }
@@ -2037,16 +2056,6 @@ input:focus {
   }
 }
 
-// #owl-carousel {
-//   .owl-stage-outer {
-//     .owl-stage {
-//       .owl-item {
-//         width: 100% !important;
-//       }
-//     }
-//   }
-// }
-
 .popup {
   display: none;
   box-sizing: border-box;
@@ -2130,7 +2139,7 @@ input:focus {
 .owl-prev::focus,
 .owl-next::focus {
   color: red;
-  background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+  background: linear-gradient(90deg, #57514a 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
 }
 
 .ui-slider-handle {
