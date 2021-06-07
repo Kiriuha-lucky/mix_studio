@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 html {
-  font-family: Montserrat;
+  font-family: Montserrat, "Arial", sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -377,7 +377,9 @@ body {
     bottom: 0;
 
     @include min($tablet) {
-      display: none;
+      display: block;
+      width: 325px;
+      right: 0;
     }
 
     @include min($desktop) {
@@ -1457,8 +1459,8 @@ input:focus {
     margin: 0;
     font-style: normal;
     font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14px;
     color: #adadad;
 
     @include min($tablet) {
@@ -1903,8 +1905,8 @@ input:focus {
       margin: 0;
       padding: 0;
       font-weight: normal;
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 12px;
+      line-height: 14px;
       box-sizing: border-box;
       transition: height 3s;
 
@@ -2164,8 +2166,8 @@ input:focus {
   overflow-y: scroll;
   border: 3px solid #d8ad78;
 
-  
-  
+
+
   @include min($desktop) {
     width: 75%;
     padding: 25px;
@@ -2189,14 +2191,14 @@ input:focus {
     right: 10px;
     top: 10px;
     width: 30px;
-    height: 30px; 
+    height: 30px;
     cursor: pointer;
 
     @include min($tablet) {
       right: 20px;
     top: 20px;
     width: 40px;
-    height: 40px; 
+    height: 40px;
     }
 
     &::after,
@@ -2209,7 +2211,7 @@ input:focus {
       left: 50%;
       top: 50%;
 
-      
+
     }
 
     &::after {
