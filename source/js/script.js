@@ -26,7 +26,7 @@ jQuery(document).ready(function () {
     }
   });
 
-  $("#politic").click(function (e) {
+  $(".footer__text").click(function (e) {
     $(".popup").addClass('popup--open');
     $("body").addClass('body__block');
   });
@@ -271,7 +271,7 @@ jQuery(document).ready(function () {
     toggleHeader();
   });
 
-  // var $step=1;
+
 
   // var $steps = function (step) {
   //   $(".steps__item").removeClass("steps__item--check");
