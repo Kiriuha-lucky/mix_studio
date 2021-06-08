@@ -91,22 +91,6 @@ jQuery(document).ready(function () {
     }
   });
 
-  // $('#owl-carousel3').owlCarousel({
-  //   items: 1,
-  //   loop: true,
-  //   autoplay: true,
-  //   autoplayHoverPause: true,
-  //   dots: false,
-  //   // center: true,
-  //   nav: false,
-  //   callbacks: true,
-  //   onChanged: function(event) {
-  //     console.log(event.type);
-  //     $(".steps__item").removeClass("steps__item--check");
-  //     $(".steps__item").eq(event.item.index).addClass("steps__item--check");
-  //   }
-  // });
-
   $(function () {
     $("a[href^='#']").click(function () {
       var _href = $(this).attr("href");
@@ -116,8 +100,6 @@ jQuery(document).ready(function () {
       return false;
     });
   });
-
-
 
   var $moneycount = function () {
     var $slider1 = parseInt($("#slider-bar").attr('data-1'));
@@ -271,19 +253,22 @@ jQuery(document).ready(function () {
     toggleHeader();
   });
 
+// var $step=0;
 
+//   var $steps = function (now) {
+//     console.log($(".steps__item"));
+//     $(".steps__item").removeClass("steps__item--check");
+//     $(".steps__item").eq(now).addClass("steps__item--check");
+//     now++;
+//     $step=now;
+//   };
 
-  // var $steps = function (step) {
-  //   $(".steps__item").removeClass("steps__item--check");
-  //   $(".steps__item").eq(step).addClass("steps__item--check");
-  //   $step = $step + 1;
-  // };
-
-  // setInterval($steps($step), 1000);
+//   setInterval($steps($step), 1000);
 
   $(".steps__item").bind('click', function (e) {
     $(".steps__item").removeClass("steps__item--check");
     $(this).addClass("steps__item--check");
     $(".steps__slider .steps__item-image").attr("src", $(this).attr('data-step'));
   });
+
 });
