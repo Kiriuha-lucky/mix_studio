@@ -120,9 +120,9 @@ jQuery(document).ready(function () {
 
 
   var $moneycount = function () {
-    var $slider1 = $("#slider-bar").attr('data-1');
-    var $slider2 = $("#slider-bar2").attr('data-2');
-    var $slider3 = $("#slider-bar3").attr('data-3');
+    var $slider1 = parseInt($("#slider-bar").attr('data-1'));
+    var $slider2 = parseInt($("#slider-bar2").attr('data-2'));
+    var $slider3 = parseInt($("#slider-bar3").attr('data-3'));
     var $money__week = $("#money--week");
     var $money__month = $("#money--month");
     var $money__year = $("#money--year");
@@ -256,7 +256,7 @@ jQuery(document).ready(function () {
     });
   })();
 
-  $("#phone").mask("8 (999) 999-99-99");
+  $("#phone").mask("9 (999) 999-99-99");
   $('.lazy').Lazy();
 
   function toggleHeader() {
