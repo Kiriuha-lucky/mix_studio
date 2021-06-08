@@ -7,11 +7,8 @@
   <meta name="description" content="Лучшая вебкам студия Санкт-Петербурга. Работа для молодых людей. Присоединяйся к команде." />
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="../fonts/opensans.woff2" as="font">
-  <link rel="preload" href="../fonts/opensansbold.woff2" as="font">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
   <title>MIX Studio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -93,7 +90,7 @@
                 srcset="img/boy-tadesktop.webp 1x, img/boy-desktop_2x.webp 2x">
               <source type="image/webp" srcset="img/boy.webp 1x, img/boy_2x.webp 2x">
 
-              <source media="(min-width: 1290px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.jpg 2x">
+              <source media="(min-width: 1290px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/boy-desktop.png 1x, img/boy-desktop_2x.png 2x">
               <img class="main__img" src="img/boy.png" srcset="img/boy_2x.png 2x" alt="boy">
             </picture>
@@ -104,7 +101,7 @@
                 srcset="img/girl-tablet.webp 1x, img/girl-tablet_2x.webp 2x">
               <source type="image/webp" srcset="img/girl.webp 1x, img/girl_2x.webp 2x">
 
-              <source media="(min-width: 1290px)" srcset="img/girl-desktop.png 1x, img/girl-desktop_2x.jpg 2x">
+              <source media="(min-width: 1290px)" srcset="img/girl-desktop.png 1x, img/girl-desktop_2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/girl-tablet.png 1x, img/girl-tablet_2x.png 2x">
               <img class="main__img-odd" src="img/girl.png" srcset="img/girl_2x.png 2x" alt="girl">
             </picture>
@@ -358,20 +355,33 @@
           </ul>
           <a href="#write" class="button comand__button">Присоединиться к нам</a>
         </section>
-
         <section class="steps">
           <h2 class="title steps__title">4 простых шага к финансовой независимости</h2>
           <div class="steps__main-wrapper">
             <ul class="steps__list">
-              <li class="steps__item steps__item--check" data-step="img/step_1.jpg">
-                <img src="img/step_1.jpg" alt="" class="steps__item-image">
+              <li class="steps__item steps__item--check" data-step="img/step_1_desktop.jpg">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/step_1_tablet.webp 1x, img/step_1_tablet_2x.webp 2x">
+                  <source type="image/webp" srcset="img/step_1.webp 1x, img/step_1_2x.webp 2x">
+    
+                  <source media="(min-width: 768px)" srcset="img/step_1_tablet.jpg 1x, img/step_1_tablet_2x.jpg 2x">
+                  <img class="steps__item-image" src="img/step_1.jpg" srcset="img/step_1_2x.jpg 2x" alt="girl">
+                </picture>
                 <div class="steps__wrapper">
                   <h3 class="steps__item-title">ОСТАВЬ ЗАЯВКУ НА САЙТЕ</h3>
                   <p class="steps__item-text">Наш менеджер позвонит тебе и подберет удобное время для встречи</p>
                 </div>
               </li>
-              <li class="steps__item" data-step="img/step_2.jpg">
-                <img src="img/step_2.jpg" alt="" class="steps__item-image">
+              <li class="steps__item" data-step="img/step_2_desktop.jpg">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/step_2_tablet.webp 1x, img/step_2_tablet_2x.webp 2x">
+                  <source type="image/webp" srcset="img/step_2.webp 1x, img/step_2_2x.webp 2x">
+    
+                  <source media="(min-width: 768px)" srcset="img/step_2_tablet.jpg 1x, img/step_2_tablet_2x.jpg 2x">
+                  <img class="steps__item-image" src="img/step_2.jpg" srcset="img/step_2_2x.jpg 2x" alt="girl">
+                </picture>
                 <div class="steps__wrapper">
                   <h3 class="steps__item-title">ЗНАКОМСТВО</h3>
                   <p class="steps__item-text">Пригласим тебя в гости, познакомимся, всё покажем и расскажем, и даже
@@ -379,27 +389,38 @@
                     тебе такси</p>
                 </div>
               </li>
-              <li class="steps__item" data-step="img/step_3.jpg">
-                <img src="img/step_3.jpg" alt="" class="steps__item-image">
+              <li class="steps__item" data-step="img/step_3_desktop.jpg">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/step_3_tablet.webp 1x, img/step_3_tablet_2x.webp 2x">
+                  <source type="image/webp" srcset="img/step_3.webp 1x, img/step_3_2x.webp 2x">
+    
+                  <source media="(min-width: 768px)" srcset="img/step_3_tablet.jpg 1x, img/step_3_tablet_2x.jpg 2x">
+                  <img class="steps__item-image" src="img/step_3.jpg" srcset="img/step_3_2x.jpg 2x" alt="girl">
+                </picture>
                 <div class="steps__wrapper">
                   <h3 class="steps__item-title">ПРОБНАЯ СМЕНА</h3>
                   <p class="steps__item-text">Инструктаж и ответы на вопросы. Всегда Твой личный коуч будем рядом – на
                     расстоянии одного клика</p>
                 </div>
               </li>
-              <li class="steps__item" data-step="img/step_4.jpg">
-                <img src="img/step_4.jpg" alt="" class="steps__item-image">
+              <li class="steps__item" data-step="img/step_4_desktop.jpg">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/step_4_tablet.webp 1x, img/step_4_tablet_2x.webp 2x">
+                  <source type="image/webp" srcset="img/step_4.webp 1x, img/step_4_2x.webp 2x">
+    
+                  <source media="(min-width: 768px)" srcset="img/step_4_tablet.jpg 1x, img/step_4_tablet_2x.jpg 2x">
+                  <img class="steps__item-image" src="img/step_4.jpg" srcset="img/step_4_2x.jpg 2x" alt="girl">
+                </picture>
                 <div class="steps__wrapper">
                   <h3 class="steps__item-title">НАЧАЛО КАРЬЕРЫ</h3>
                   <p class="steps__item-text">Начинаете зарабатывать и развиваться, первая выплата сразу после смены</p>
                 </div>
               </li>
             </ul>
-            <div class="steps__slider" id="owl-carousel3">
-              <img src="img/step_1.jpg" alt="" class="steps__item-image">
-              <img src="img/step_2.jpg" alt="" class="steps__item-image">
-              <img src="img/step_3.jpg" alt="" class="steps__item-image">
-              <img src="img/step_4.jpg" alt="" class="steps__item-image">
+            <div class="steps__slider">
+              <img src="img/step_1_desktop.jpg" alt="" class="steps__item-image">
             </div>
           </div>
         </section>
@@ -788,6 +809,8 @@
   </script>
 
   <script type='text/javascript' defer>
+  window.onload = function(){
+  setTimeout( function(){ 
     (function () {
       var s = document['createElement']('script');
       s.type = 'text/javascript';
@@ -826,6 +849,9 @@
   <noscript>
     <div><img src="https://mc.yandex.ru/watch/77729347" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript>
+   }, 2000);
+}
+    
 </body>
 
 </html>
