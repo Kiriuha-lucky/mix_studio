@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 html {
-  font-family: Montserrat;
+  font-family: Montserrat, "Arial", sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -28,6 +28,23 @@ body {
   margin: 0;
   width: 100%;
   background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
+}
+
+.body__block {
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100vw !important;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1400;
+  }
 }
 
 .button {
@@ -111,7 +128,6 @@ body {
 
 .container {
   margin: 0 auto;
-  // outline: 2px solid green;
   min-width: 320px;
   width: 100%;
   overflow: hidden;
@@ -121,28 +137,49 @@ body {
   }
 
   @include min($desktop) {
+    position: relative;
     width: 100%;
   }
 }
 
 .page-header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
   background-color: black;
-  width: 100%;
-  max-width: 1290px;
   margin: 0 auto;
-  box-sizing: border-box;
+
+  &__scroll {
+    position: fixed;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+    z-index: 500;
+    width: 100%;
+    background: black;
+  }
 
   @include min($tablet) {
     background: transparent;
     z-index: 500;
+
+    &__scroll {
+      background: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
   }
 
   &__logo-image {
+    cursor: pointer;
     width: 85px;
 
     @include min($tablet) {
@@ -155,6 +192,7 @@ body {
 
     @include min($tablet) {
       display: block;
+      width: auto;
     }
   }
 
@@ -224,9 +262,8 @@ body {
 
   &__nav-wrapper {
     // display: none;
-    opacity: 0;
+    opacity: 85%;
     box-sizing: border-box;
-    z-index: -100;
     position: absolute;
     flex-direction: column;
     left: 0;
@@ -235,9 +272,9 @@ body {
     height: 100vh;
     padding: 40px 20px;
     background: linear-gradient(311.98deg, #353a40 6.11%, #16171b 90.27%);
-    // opacity: 0.85;
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.17);
     transition: all 0.5s;
+    z-index: 500;
 
     @include min($tablet) {
       top: 0;
@@ -248,17 +285,13 @@ body {
   }
 
   &--open {
-    @include min($tablet) {
-      padding-left: 50px;
+    .page-header__wrapper {
+      @include min($tablet) {
+        padding-left: 50px;
+      }
     }
 
     .page-header {
-      &__nav-wrapper {
-        // display: block;
-        opacity: 0.85;
-        z-index: 500;
-      }
-
       &__nav-toggle {
         transform: rotate(90deg);
 
@@ -282,18 +315,20 @@ body {
   min-height: 475px;
   background-image: url(../img/mixstudio.svg);
   background-repeat: space;
+  background-size: 100%;
 
   @include min($tablet) {
-    background-size: 700px;
+    background-size: 100%;
     min-height: 650px;
     margin-top: -90px;
     padding-top: 125px;
     margin-bottom: 0;
+    background-repeat: space;
   }
 
   @include min($desktop) {
     min-height: auto;
-    background-size: 100vw;
+    background-size: 100%;
     background-repeat: repeat;
     padding-top: 230px;
   }
@@ -342,7 +377,9 @@ body {
     bottom: 0;
 
     @include min($tablet) {
-      display: none;
+      display: block;
+      width: 325px;
+      right: 0;
     }
 
     @include min($desktop) {
@@ -588,13 +625,15 @@ body {
     min-height: 60px;
 
     @include min($tablet) {
+      box-sizing: border-box;
       padding-left: 90px;
       width: 340px;
-      min-height: 80px;
+      height: 85px;
     }
 
     @include min($desktop) {
       width: 410px;
+      max-height: 85px;
     }
 
     &::before {
@@ -702,8 +741,15 @@ body {
     &--button {
       padding: 0;
 
+      @include min($tablet) {
+        box-sizing: border-box;
+        min-height: 85px;
+        padding-top: 11px;
+      }
+
       @include min($desktop) {
         margin-left: -65px;
+        min-height: 85px;
       }
     }
   }
@@ -859,30 +905,28 @@ body {
     &-scale__numbers-item--work {
       text-align: center;
       font-size: 12px;
+      width: 23px;
 
       @include min($tablet) {
         font-size: 14px;
-        width: 25%;
+        width: auto;
       }
 
       @include min($desktop) {
-        width: 25%;
+        width: auto;
       }
 
       &:first-child {
         text-align: left;
+        width: 15px;
 
         @include min($tablet) {
-          width: 16%;
+          width: auto;
         }
       }
 
       &:last-child {
         text-align: right;
-
-        @include min($tablet) {
-          width: 17%;
-        }
       }
     }
 
@@ -1017,8 +1061,11 @@ body {
   }
 
   &__wrapper {
+    margin-bottom: 10px;
+
     @include min($tablet) {
       margin: 0 auto;
+      margin-bottom: 20px;
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -1096,6 +1143,8 @@ body {
 
     &--button {
       @include min($tablet) {
+        align-self: flex-start;
+        margin-top: 53px;
         flex-grow: 1;
       }
 
@@ -1109,12 +1158,14 @@ body {
     display: none;
 
     @include min($tablet) {
+      display: flex;
       margin: 0;
       margin-left: 50px;
       width: 430px;
     }
 
     @include min($desktop) {
+      display: none;
       margin: 0;
       margin-left: 50px;
       width: 430px;
@@ -1173,18 +1224,19 @@ body {
   padding-bottom: 40px;
   background-image: url(../img/mixstudio.svg);
   background-repeat: space;
+  background-size: 100%;
 
   @include min($tablet) {
     padding-bottom: 400px;
-    background-size: 750px;
     background-repeat: space;
     background-position: auto;
   }
 
   @include min($desktop) {
-    padding-bottom: 20px;
-    background-size: 80vw;
+    padding-bottom: 100px;
+    padding-top: 100px;
     margin-bottom: 130px;
+    background-size: 100%;
   }
 
   &::after {
@@ -1321,10 +1373,12 @@ input:focus {
   padding-top: 35px;
   background-image: url(../img/comand.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: 50% 50%;
 
   @include min($tablet) {
     margin-bottom: 70px;
+    // background-size: contain;
     background-image: url(../img/comand-tablet.png);
   }
 
@@ -1405,8 +1459,8 @@ input:focus {
     margin: 0;
     font-style: normal;
     font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14px;
     color: #adadad;
 
     @include min($tablet) {
@@ -1851,8 +1905,8 @@ input:focus {
       margin: 0;
       padding: 0;
       font-weight: normal;
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 12px;
+      line-height: 14px;
       box-sizing: border-box;
       transition: height 3s;
 
@@ -1914,6 +1968,7 @@ input:focus {
   }
 
   &__logo-image {
+    cursor: pointer;
     display: none;
 
     @include min($tablet) {
@@ -2097,6 +2152,88 @@ input:focus {
   }
 }
 
+.popup {
+  display: none;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+  height: 100%;
+  overflow-y: scroll;
+  border: 3px solid #d8ad78;
+
+
+
+  @include min($desktop) {
+    width: 75%;
+    padding: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%;
+    top: 5%;
+    border-radius: 15px;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &__close {
+    @include btn-reset;
+    border-radius: 5px;
+    border: 2px solid #d8ad78;
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    @include min($tablet) {
+      right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #d8ad78;
+      left: 50%;
+      top: 50%;
+
+
+    }
+
+    &::after {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+    &::before {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.elem {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.elem::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .owl-prev::hover,
 .owl-next::hover,
 .owl-prev::focus,
@@ -2154,3 +2291,5 @@ input:focus {
     border-radius: 5px;
   }
 }
+
+
