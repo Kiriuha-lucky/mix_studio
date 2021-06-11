@@ -69,24 +69,26 @@ jQuery(document).ready(function () {
 
   $('#owl-carousel2').owlCarousel({
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: true,
     dots: false,
     center: true,
-    autoWidth: true,
     nav: false,
     responsive: {
       0: {
         items: 3,
-        margin: 20
+        margin: 10,
+        autoWidth: true,
       },
       768: {
-        items: 2,
-        margin: 30
+        items: 3,
+        margin: 15,
+        autoWidth: true,
       },
       1290: {
         items: 3,
-        margin: 30
+        margin: 20,
+        autoWidth: true,
       }
     }
   });
@@ -112,25 +114,25 @@ jQuery(document).ready(function () {
     var $days = 0;
 
     if ($slider2 == 4) {
-      $english = 1.2;
+      $english = 1.4;
     } else if ($slider2 == 3) {
-      $english = 1.15;
+      $english = 1.3;
     } else if ($slider2 == 2) {
-      $english = 1.1;
+      $english = 1.2;
     } else if ($slider2 == 1) {
-      $english = 1.05;
+      $english = 1.1;
     } else {
       $english = 1;
     };
 
     if ($slider3 == 4) {
-      $days = 1.2;
+      $days = 1.4;
     } else if ($slider3 == 3) {
-      $days = 1.15;
+      $days = 1.3;
     } else if ($slider3 == 2) {
-      $days = 1.1;
+      $days = 1.2;
     } else if ($slider3 == 1) {
-      $days = 1.05;
+      $days = 1.1;
     } else {
       $days = 1;
     };
