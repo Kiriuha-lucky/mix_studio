@@ -774,7 +774,7 @@ body {
     z-index: -100;
     border-radius: 10px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
-    
+
 
     @include min($tablet) {
       top: 50%;
@@ -811,6 +811,7 @@ body {
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
 
     @include min($desktop) {
       width: 750px;
@@ -1563,7 +1564,7 @@ input:focus {
     z-index: -100;
     border-radius: 10px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
-    
+
 
     @include min($tablet) {
       display: block;
@@ -1605,6 +1606,8 @@ input:focus {
     @include min($tablet) {
       max-width: 550px;
       margin: 0 auto;
+
+      
     }
 
     @include min($desktop) {
@@ -1740,7 +1743,6 @@ input:focus {
     display: flex;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
 
     @include min($desktop) {
       max-width: 1130px;
