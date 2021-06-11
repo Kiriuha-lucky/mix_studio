@@ -117,25 +117,25 @@ jQuery(document).ready(function () {
     var $days = 0;
 
     if ($slider2 == 4) {
-      $english = 1.2;
+      $english = 1.4;
     } else if ($slider2 == 3) {
-      $english = 1.15;
+      $english = 1.3;
     } else if ($slider2 == 2) {
-      $english = 1.1;
+      $english = 1.2;
     } else if ($slider2 == 1) {
-      $english = 1.05;
+      $english = 1.1;
     } else {
       $english = 1;
     };
 
     if ($slider3 == 4) {
-      $days = 1.2;
+      $days = 1.4;
     } else if ($slider3 == 3) {
-      $days = 1.15;
+      $days = 1.3;
     } else if ($slider3 == 2) {
-      $days = 1.1;
+      $days = 1.2;
     } else if ($slider3 == 1) {
-      $days = 1.05;
+      $days = 1.1;
     } else {
       $days = 1;
     };
