@@ -1,0 +1,69 @@
+.popup {
+  display: none;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+  height: 100%;
+  overflow-y: scroll;
+  border: 3px solid #d8ad78;
+
+
+
+  @include min($desktop) {
+    width: 75%;
+    padding: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%;
+    top: 5%;
+    border-radius: 15px;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &__close {
+    @include btn-reset;
+    border-radius: 5px;
+    border: 2px solid #d8ad78;
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    @include min($tablet) {
+      right: 20px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #d8ad78;
+      left: 50%;
+      top: 50%;
+    }
+
+    &::after {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &::before {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+  }
+}

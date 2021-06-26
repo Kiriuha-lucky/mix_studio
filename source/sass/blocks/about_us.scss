@@ -1,0 +1,115 @@
+.about-us {
+  padding: 40px 0;
+
+  background-image: url(../img/city.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include min($tablet) {
+    background-image: url(../img/city-tablet.png);
+    position: relative;
+  }
+
+  @include min($desktop) {
+    background-image: url(../img/city-desktop.png);
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    padding: 0 15px;
+    position: relative;
+
+    @include min($tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    @include min($desktop) {
+      width: 1070px;
+      margin: 0 auto;
+    }
+  }
+
+  &__text-wrapper {
+    @include min($tablet) {
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    @include min($tablet) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #adadad;
+
+    span {
+      margin-bottom: 25px;
+    }
+
+    @include min($tablet) {
+      font-size: 15px;
+      line-height: 18px;
+      text-align: left;
+    }
+
+    @include min($desktop) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @include min($tablet) {
+      width: 322px;
+    }
+  }
+
+  &__button {
+    @include min($tablet) {
+      position: absolute;
+      bottom: 130px;
+      left: 20px;
+    }
+
+    @include min($desktop) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include min($desktop) {
+        display: flex;
+        margin: 0;
+      }
+    }
+  }
+}

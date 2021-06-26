@@ -1,0 +1,215 @@
+.advantages {
+  margin-bottom: 60px;
+
+  @include min($desktop) {
+    margin-bottom: 130px;
+  }
+
+  &__wrapper {
+    @include min($tablet) {
+      width: 728px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include min($desktop) {
+      position: relative;
+      width: 850px;
+      padding-left: 423px;
+    }
+
+    &::before {
+      @include min($desktop) {
+        position: absolute;
+        content: "";
+        width: 879px;
+        height: 608px;
+        background-image: url(../img/advantages-desktop.png);
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        bottom: 19px;
+        left: -445px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    width: 210px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    color: #adadad;
+
+    @include min($tablet) {
+      font-size: 11px;
+      line-height: 13px;
+      width: 245px;
+    }
+  }
+
+  &-item__title {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    @include min($tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    position: relative;
+    width: 280px;
+    padding-left: 70px;
+    margin-bottom: 15px;
+    min-height: 60px;
+
+    @include min($tablet) {
+      box-sizing: border-box;
+      padding-left: 90px;
+      width: 340px;
+      height: 85px;
+    }
+
+    @include min($desktop) {
+      width: 410px;
+      max-height: 85px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: url(../img/money.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+      box-shadow: 0px 2px 3px rgba(118, 118, 118, 0.07), inset 0px 4px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px, auto;
+
+      @include min($tablet) {
+        width: 80px;
+        height: 80px;
+        background-size: 50px, auto;
+      }
+    }
+
+    &--graph {
+      &::before {
+        background: url(../img/icon-calendar.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--office {
+      &::before {
+        background: url(../img/icon-internet.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--curator {
+      &::before {
+        background: url(../img/icon-branching.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--money {
+      &::before {
+        background: url(../img/icon-pay-day.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--room {
+      &::before {
+        background: url(../img/icon-room.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--fine {
+      &::before {
+        background: url(../img/icon-insurance.svg), linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px, auto;
+
+        @include min($tablet) {
+          background-size: 50px, auto;
+        }
+      }
+    }
+
+    &--button {
+      padding: 0;
+
+      @include min($tablet) {
+        box-sizing: border-box;
+        min-height: 85px;
+        padding-top: 11px;
+      }
+
+      @include min($desktop) {
+        margin-left: -65px;
+        min-height: 85px;
+      }
+    }
+  }
+}

@@ -1,10 +1,8 @@
 'use strict';
 
 jQuery(document).ready(function () {
-  $(".page-header__nav-wrapper").fadeOut();
   $(".page-header__nav-toggle").click(function (e) {
     $(".page-header").toggleClass('page-header--open');
-    $(".page-header__nav-wrapper").fadeToggle();
   });
 
   $(".questions__item").bind('click', function (e) {
@@ -14,15 +12,18 @@ jQuery(document).ready(function () {
 
   $(".page-header__nav-list a").click(function (e) {
     $(".page-header").toggleClass('page-header--open');
-    $(".page-header__nav-wrapper").fadeOut();
   });
+
+  $(".page-header__nav-button").click(function (e) {
+    $(".page-header").toggleClass('page-header--open');
+  });
+
 
   $(document).click(function (e) {
     var div = $(".page-header__nav");
     if (!div.is(e.target) &&
       div.has(e.target).length === 0) {
       $(".page-header").removeClass('page-header--open');
-      $(".page-header__nav-wrapper").fadeOut();
     }
   });
 

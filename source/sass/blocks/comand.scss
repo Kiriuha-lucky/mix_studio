@@ -1,0 +1,116 @@
+.comand {
+  margin-bottom: 50px;
+  padding-top: 35px;
+  background-image: url(../img/comand.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @include min($tablet) {
+    margin-bottom: 70px;
+    // background-size: contain;
+    background-image: url(../img/comand-tablet.png);
+  }
+
+  @include min($desktop) {
+    margin-bottom: 85px;
+    background-image: url(../img/comand-desktop.png);
+    background-size: cover;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include list-reset;
+    margin-bottom: 35px;
+
+    @include min($desktop) {
+      margin: 0 auto;
+      width: 880px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin: 0 auto;
+    padding: 13px;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    box-sizing: border-box;
+
+    @include min($tablet) {
+      width: 415px;
+      flex-shrink: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-item__number {
+    margin: 0;
+    font-weight: 800;
+    margin-right: 20px;
+    font-size: 80px;
+    line-height: 85px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d8ad78;
+
+    @include min($tablet) {
+      font-size: 100px;
+      line-height: 122px;
+    }
+  }
+
+  &-item__title {
+    display: block;
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+
+    @include min($tablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &-item__text {
+    display: block;
+    width: 217px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #adadad;
+
+    @include min($tablet) {
+      font-size: 13px;
+      line-height: 16px;
+      width: auto;
+    }
+  }
+
+  &__button {
+    @include min($tablet) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include min($desktop) {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.owl {
+  &-stage {
+    display: flex;
+  }
+
+  &-nav {
+    display: none;
+
+    @include min($desktop) {
+      display: block;
+    }
+  }
+
+  &-prev,
+  &-next {
+    cursor: pointer;
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+
+    @include min($desktop) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      border: 2px solid #fdd9a8;
+
+      &::hover,
+      &::focus {
+        background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%);
+      }
+    }
+
+    span {
+      color: #fdd9a8;
+      font-size: 25px;
+    }
+  }
+
+  &-prev::hover,
+  &-next::hover,
+  &-prev::focus,
+  &-next::focus {
+    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+  }
+
+  &-next {
+    right: 0;
+  }
+
+  &-prev {
+    left: 0;
+  }
+}

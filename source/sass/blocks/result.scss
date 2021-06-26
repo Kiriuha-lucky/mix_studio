@@ -1,0 +1,72 @@
+.result {
+  padding: 15px 25px;
+  background: linear-gradient(180deg, #292e34 -56.47%, #16171b 100%);
+
+  @include min($desktop) {
+    padding: 10px 110px;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    @include min($tablet) {
+      margin: 0;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__sum {
+    margin: 0 auto;
+    display: block;
+    padding: 14px 50px;
+
+    background: #ffffff;
+    box-shadow: inset 0px 7px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #d8ad78;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+
+    @include min($tablet) {
+      margin: 0;
+      width: 370px;
+      padding: 10px 20px;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 9px;
+    text-align: center;
+    color: #5a5a5a;
+
+    @include min($tablet) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 10px;
+
+    @include min($tablet) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.main {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 23px 20px 0;
+  min-height: 475px;
+  background-image: url(../img/mixstudio.svg);
+  background-repeat: space;
+  background-size: 100%;
+
+  @include min($tablet) {
+    background-size: 100%;
+    min-height: 650px;
+    margin-top: -90px;
+    padding-top: 125px;
+    margin-bottom: 0;
+    background-repeat: space;
+  }
+
+  @include min($desktop) {
+    min-height: auto;
+    background-size: 100%;
+    background-repeat: repeat;
+    padding-top: 230px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    @include min($desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @include min($tablet) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    @include min($desktop) {
+      font-size: 40px;
+      line-height: 49px;
+      padding-bottom: 453px;
+    }
+  }
+
+  &__wrapper {
+    @include min($desktop) {
+      display: block;
+      position: relative;
+      width: 1290px;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+
+    @include min($tablet) {
+      display: block;
+      width: 325px;
+      right: 0;
+    }
+
+    @include min($desktop) {
+      display: block;
+      width: 518px;
+      left: -160px;
+    }
+  }
+
+  &__img-odd {
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+
+    @include min($tablet) {
+      display: block;
+      width: 375px;
+      right: 0;
+    }
+
+    @include min($desktop) {
+      display: block;
+      width: 599px;
+      right: -180px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 30px;
+
+    @include min($tablet) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 340px;
+    }
+
+    @include min($desktop) {
+      top: 540px;
+    }
+  }
+}

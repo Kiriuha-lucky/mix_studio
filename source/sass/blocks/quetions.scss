@@ -1,0 +1,117 @@
+.questions {
+  max-width: 1070px;
+  margin: 0 auto;
+
+  &__title {
+    padding: 0 15px;
+    margin-bottom: 25px;
+
+    @include min($tablet) {
+      width: 636px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    @include min($desktop) {
+      width: auto;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    width: 80%;
+    min-width: 280px;
+    margin: 0 auto;
+
+    @include min($tablet) {
+      width: 728px;
+    }
+
+    @include min($desktop) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: 2px solid #424750;
+    background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
+    opacity: 0.9;
+
+    &-title {
+      cursor: pointer;
+      position: relative;
+      padding: 16px 15px;
+      padding-right: 35px;
+      margin: 0;
+      background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+
+      @include min($tablet) {
+        padding: 20px 30px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 50px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url(../img/chevron_down.svg);
+        transform: translateY(-50%);
+        transition: all 0.5s;
+      }
+    }
+
+
+
+    &-text {
+      margin: 0;
+      padding: 0 15px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      overflow: hidden;
+      transition: max-height .5s, padding .5s;
+      max-height: 0;
+
+      @include min($tablet) {
+        padding: 0 30px;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    &--open {
+      & .questions__item-text {
+      max-height: 700px;
+      padding: 15px;
+
+        @include min($tablet) {
+          padding: 20px 30px;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+
+      & .questions__item-title::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}
