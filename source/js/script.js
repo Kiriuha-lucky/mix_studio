@@ -52,6 +52,7 @@ jQuery(document).ready(function () {
     autoplayHoverPause: true,
     dots: false,
     center: true,
+    nav: false,
     responsive: {
       0: {
         items: 1,
@@ -63,7 +64,8 @@ jQuery(document).ready(function () {
       },
       1290: {
         items: 1,
-        margin: 0
+        margin: 0,
+        nav: true
       }
     }
   });
@@ -90,6 +92,31 @@ jQuery(document).ready(function () {
         items: 3,
         margin: 20,
         autoWidth: true,
+        nav: true
+      }
+    }
+  });
+
+  $('#owl-carousel3').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    dots: false,
+    center: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 0
+      },
+      768: {
+        items: 1,
+        margin: 0
+      },
+      1290: {
+        items: 1,
+        margin: 0,
+        nav: true
       }
     }
   });

@@ -1,5 +1,6 @@
 .profits {
   width: 100%;
+  margin-bottom: 30px;
 
   @include min($tablet) {
     margin-bottom: 30px;
@@ -26,6 +27,7 @@
   &__subtitle {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 30px;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
@@ -42,27 +44,34 @@
   }
 
   &__list {
-    @include list-reset;
+    position: relative;
     margin: 0 auto;
     display: block;
-    width: 190px;
+    margin-bottom: 30px;
+    overflow: hidden;
 
     @include min($tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      width: 670px;
+      margin-bottom: 40px;
     }
 
     @include min($desktop) {
-      width: 80%;
+      margin-bottom: 50px;
+      width: 1130px;
     }
   }
 
   &__item {
-    @include min($tablet) {
-      width: 190px;
+    position: relative;
+    min-width: 280px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include min($desktop) {
+      width: 1130px;
+
+
     }
 
     &--button {
@@ -78,65 +87,52 @@
     }
   }
 
-  &__button {
-    display: none;
+  &__picture {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
 
     @include min($tablet) {
-      display: flex;
-      margin: 0;
-      margin-left: 50px;
-      width: 430px;
+      height: 450px;
     }
 
     @include min($desktop) {
-      display: none;
-      margin: 0;
-      margin-left: 50px;
-      width: 430px;
-    }
-  }
-
-  &__picture {
-    position: relative;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 10px;
-
-    &--tropic {
-      width: 100%;
-    }
-
-    &--car,
-    &--flat {
-      left: 60%;
-      transform: translateX(-50%);
+      height: 650px;
     }
   }
 
   &-item__title {
+    display: block;
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(87.71deg,#bd925b 0%,#ddb179 31.08%,#f5c98e 62.85%,#bc9660 95.14%);
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+    box-sizing: border-box;
     text-align: center;
+
+    @include min($desktop) {
+      padding: 25px;
+
+      font-size: 22px;
+    line-height: 24px;
+    }
   }
 
-  &__item-wrapper {
-    position: relative;
+  &__button {
+    margin: 0 auto;
 
-    &::after {
-      z-index: -1;
-      position: absolute;
-      content: "";
-      display: block;
-      width: 190px;
-      height: 100px;
-      background: linear-gradient(311.98deg, #252729 6.11%, #16171b 90.27%);
-      box-shadow: 0px 2px 3px rgba(118, 118, 118, 0.07), inset 0px 4px 7px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+    @include min($tablet) {
+    }
+
+    @include min($desktop) {
     }
   }
 }

@@ -1,29 +1,21 @@
 .owl {
+
+
+
   &-stage {
     display: flex;
   }
 
-  &-nav {
-    display: none;
-
-    @include min($desktop) {
-      display: block;
-    }
-  }
-
   &-prev,
   &-next {
-    cursor: pointer;
-    display: none;
-    border: none;
-    outline: none;
-    background: none;
-
     @include min($desktop) {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      display: block;
       width: 40px;
       height: 40px;
       border-radius: 5px;
@@ -45,7 +37,9 @@
   &-next::hover,
   &-prev::focus,
   &-next::focus {
-    background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+    @include min($desktop) {
+      background: linear-gradient(90deg, #d8ad78 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+    }
   }
 
   &-next {
@@ -56,3 +50,15 @@
     left: 0;
   }
 }
+
+.disabled {
+  display: none;
+}
+
+// .owl-prev::hover,
+// .owl-next::hover,
+// .owl-prev::focus,
+// .owl-next::focus {
+//   color: red;
+//   background: linear-gradient(90deg, #57514a 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
+// }

@@ -179,13 +179,7 @@ input:focus {
   height: 0;
 }
 
-.owl-prev::hover,
-.owl-next::hover,
-.owl-prev::focus,
-.owl-next::focus {
-  color: red;
-  background: linear-gradient(90deg, #57514a 0%, #fdd9a8 50.35%, #d1aa70 100%) !important;
-}
+
 
 .ui-slider-handle {
   top: 50%;
