@@ -256,18 +256,6 @@ jQuery(document).ready(function () {
     toggleHeader();
   });
 
-// var $step=0;
-
-//   var $steps = function (now) {
-//     console.log($(".steps__item"));
-//     $(".steps__item").removeClass("steps__item--check");
-//     $(".steps__item").eq(now).addClass("steps__item--check");
-//     now++;
-//     $step=now;
-//   };
-
-//   setInterval($steps($step), 1000);
-
   $(".steps__item").bind('click', function (e) {
     $(".steps__item").removeClass("steps__item--check");
     $(this).addClass("steps__item--check");
