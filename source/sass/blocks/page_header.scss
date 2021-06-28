@@ -34,6 +34,7 @@
   &__logo-image {
     cursor: pointer;
     width: 85px;
+    padding-left: 30px;
 
     @include min($tablet) {
       width: 127px;
@@ -95,6 +96,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   &__contact-item {
@@ -103,13 +107,18 @@
       padding: 0;
       width: 30px;
       height: 30px;
-      background-image: url(../img/icon_phone.svg);
+
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
 
-    &:not(:first-child) {
-      display: none;
+    .page-header__link--phone {
+      background-image: url(../img/icon_phone.svg);
+    }
+
+    .page-header__link--tg {
+      background-image: url(../img/tg_icon.svg);
+
     }
   }
 
