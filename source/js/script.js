@@ -97,29 +97,29 @@ jQuery(document).ready(function () {
     }
   });
 
-  $('#owl-carousel3').owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    dots: false,
-    center: true,
-    nav: false,
-    responsive: {
-      0: {
-        items: 1,
-        margin: 0
-      },
-      768: {
-        items: 1,
-        margin: 0
-      },
-      1290: {
-        items: 1,
-        margin: 0,
-        nav: true
-      }
-    }
-  });
+  // $('#owl-carousel3').owlCarousel({
+  //   loop: true,
+  //   autoplay: true,
+  //   autoplayHoverPause: true,
+  //   dots: false,
+  //   center: true,
+  //   nav: false,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //       margin: 0
+  //     },
+  //     768: {
+  //       items: 1,
+  //       margin: 0
+  //     },
+  //     1290: {
+  //       items: 1,
+  //       margin: 0,
+  //       nav: true
+  //     }
+  //   }
+  // });
 
   $(function () {
     $("a[href^='#']").click(function () {
