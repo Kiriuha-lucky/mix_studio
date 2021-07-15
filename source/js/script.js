@@ -283,10 +283,36 @@ jQuery(document).ready(function () {
     toggleHeader();
   });
 
-  $(".steps__item").bind('click', function (e) {
-    $(".steps__item").removeClass("steps__item--check");
-    $(this).addClass("steps__item--check");
-    $(".steps__slider .steps__item-image").attr("src", $(this).attr('data-step'));
-  });
+  // $(".steps__item").bind('click', function (e) {
+  //   $(".steps__item").removeClass("steps__item--check");
+  //   $(this).addClass("steps__item--check");
+  //   $(".steps__slider .steps__item-image").attr("src", $(this).attr('data-step'));
+  // });
 
+  var steps = $(".steps__item");
+  console.log(steps);
+
+  function step_step(st) {
+    $(".steps__item").removeClass("steps__item--check");
+    $(".steps__item").eq(step).addClass("steps__item--check");
+  };
+
+  var step = 0;
+
+  function stepss() {
+    if (step >= steps.length) {
+      step = 0;
+      step_step(step);
+      step++;
+    } else {
+      step_step(step);
+      step++;
+    };
+  };
+
+  function one() {
+    console.log(555);
+  }
+
+  setInterval(stepss, 1000);
 });
