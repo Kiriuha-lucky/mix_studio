@@ -300,19 +300,22 @@ jQuery(document).ready(function () {
   var step = 0;
 
   function stepss() {
+    console.log(step);
+    var $image = "img/step_" + (step+1)  + "_desktop.jpg";
     if (step >= steps.length) {
       step = 0;
       step_step(step);
+      $image = "img/step_" + (step+1)  + "_desktop.jpg";
+      $(".steps__item-image").attr("src",$image);
       step++;
     } else {
       step_step(step);
+      $(".steps__item-image").attr("src",$image);
       step++;
     };
   };
 
-  function one() {
-    console.log(555);
-  }
+  stepss();
 
-  setInterval(stepss, 1000);
+  setInterval(stepss, 2000);
 });
