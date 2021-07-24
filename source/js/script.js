@@ -53,6 +53,7 @@ jQuery(document).ready(function () {
     dots: false,
     center: true,
     nav: false,
+    lazyLoad: true,
     responsive: {
       0: {
         items: 1,
@@ -77,6 +78,7 @@ jQuery(document).ready(function () {
     dots: false,
     center: true,
     nav: false,
+    lazyLoad: true,
     responsive: {
       0: {
         items: 3,
@@ -96,30 +98,6 @@ jQuery(document).ready(function () {
       }
     }
   });
-
-  // $('#owl-carousel3').owlCarousel({
-  //   loop: true,
-  //   autoplay: true,
-  //   autoplayHoverPause: true,
-  //   dots: false,
-  //   center: true,
-  //   nav: false,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //       margin: 0
-  //     },
-  //     768: {
-  //       items: 1,
-  //       margin: 0
-  //     },
-  //     1290: {
-  //       items: 1,
-  //       margin: 0,
-  //       nav: true
-  //     }
-  //   }
-  // });
 
   $(function () {
     $("a[href^='#']").click(function () {
@@ -283,14 +261,7 @@ jQuery(document).ready(function () {
     toggleHeader();
   });
 
-  // $(".steps__item").bind('click', function (e) {
-  //   $(".steps__item").removeClass("steps__item--check");
-  //   $(this).addClass("steps__item--check");
-  //   $(".steps__slider .steps__item-image").attr("src", $(this).attr('data-step'));
-  // });
-
   var steps = $(".steps__item");
-  console.log(steps);
 
   function step_step(st) {
     $(".steps__item").removeClass("steps__item--check");
@@ -300,7 +271,6 @@ jQuery(document).ready(function () {
   var step = 0;
 
   function stepss() {
-    console.log(step);
     var $image = "img/step_" + (step+1)  + "_desktop.jpg";
     if (step >= steps.length) {
       step = 0;
