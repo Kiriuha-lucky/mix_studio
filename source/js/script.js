@@ -247,7 +247,6 @@ jQuery(document).ready(function () {
   })();
 
   $("#phone").mask("9 (999) 999-99-99");
-  $('.lazy').Lazy();
 
   function toggleHeader() {
     var scroll_status = $(document).scrollTop();

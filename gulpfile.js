@@ -75,7 +75,8 @@ gulp.task("webp", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/img/**",
+    "source/css/normalize.css"
   ], {
     base: "source"
   })
@@ -106,5 +107,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "images", "webp", "copy", "css", "html", "js"));
+gulp.task("build", gulp.series("clean", "images", "webp", "css", "copy", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
