@@ -13,7 +13,7 @@
   @include min($desktop) {
     background-image: url(../img/city-desktop.png);
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 
   &__wrapper {
