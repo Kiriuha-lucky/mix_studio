@@ -282,4 +282,8 @@ jQuery(document).ready(function () {
       .eq(item - 2)
       .addClass("steps__item--check");
   });
+
+  $(".locations__slider").click(function(){
+    $(".locations__slider").toggleClass("locations__slider--open");
+  });
 });
