@@ -8,6 +8,7 @@
   @include min($tablet) {
     background-image: url(../img/city-tablet.png);
     position: relative;
+    margin-bottom: 65px;
   }
 
   @include min($desktop) {
