@@ -98,7 +98,7 @@ jQuery(document).ready(function () {
 
   $(function () {
     $("a[href^='#']" && "a[href!='#zero']" && "a[href!='#one']" && "a[href!='#two']" && "a[href!='#three']").click(function () {
-      var _href = $(this).attr("href");     
+      var _href = $(this).attr("href");
         $("html, body").animate({
           scrollTop: $(_href).offset().top - 200 + "px",
         });
@@ -281,5 +281,9 @@ jQuery(document).ready(function () {
     $(".steps__item")
       .eq(item - 2)
       .addClass("steps__item--check");
+  });
+
+  $(".locations__slider").click(function(){
+    $(".locations__slider").addClass("locations__slider--open");
   });
 });

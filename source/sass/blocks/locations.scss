@@ -43,12 +43,20 @@
 
   &__slider {
     position: relative;
-    width: 280px;
-    height: 190px;
+    // width: 280px;
+    // height: 190px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
+
+    &--open {
+      width: 100vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
 
     @include min($tablet) {
       width: 670px;
@@ -103,14 +111,14 @@
 
   &__item {
     width: 100%;
-    height: auto;
+    max-height: 700px;
     background-color: #fff;
-    display: flex;
+    // display: flex;
     overflow: hidden;
   }
 
   &__pic {
-    width: 100% !important;
+    display: flex;
   }
 
   &__picture {
