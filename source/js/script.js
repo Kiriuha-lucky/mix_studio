@@ -43,35 +43,38 @@ jQuery(document).ready(function () {
     }
   });
 
-  $("#owl-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    dots: false,
-    center: true,
-    nav: false,
-    lazyLoad: true,
-    responsive: {
-      0: {
-        items: 1,
-        margin: 0,
+  var owl_carousel = function () {
+    $("#owl-carousel").owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      dots: false,
+      center: true,
+      nav: false,
+      lazyLoad: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0,
+        },
+        768: {
+          items: 1,
+          margin: 0,
+        },
+        1290: {
+          items: 1,
+          margin: 0,
+          nav: true,
+        },
       },
-      768: {
-        items: 1,
-        margin: 0,
-      },
-      1290: {
-        items: 1,
-        margin: 0,
-        nav: true,
-      },
-    },
-  });
+    });
+  };
+
+  owl_carousel();
 
   $("#owl-carousel2").owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayHoverPause: true,
     dots: false,
     center: true,
     nav: false,
@@ -92,12 +95,19 @@ jQuery(document).ready(function () {
         margin: 20,
         autoWidth: true,
         nav: true,
+        autoplayHoverPause: false,
       },
     },
   });
 
   $(function () {
-    $("a[href^='#']" && "a[href!='#zero']" && "a[href!='#one']" && "a[href!='#two']" && "a[href!='#three']").click(function () {
+    $(
+      "a[href^='#']" &&
+        "a[href!='#zero']" &&
+        "a[href!='#one']" &&
+        "a[href!='#two']" &&
+        "a[href!='#three']"
+    ).click(function () {
       var _href = $(this).attr("href");
       $("html, body").animate({
         scrollTop: $(_href).offset().top - 200 + "px",
@@ -267,15 +277,15 @@ jQuery(document).ready(function () {
     startPosition: "zero",
   });
 
-  var owl = $("#owl-carousel4");
+  var owl4 = $("#owl-carousel4");
 
-  owl.on("initialized.owl.carousel", function () {
+  owl4.on("initialized.owl.carousel", function () {
     var item = 0;
     $(".steps__item").removeClass("steps__item--check");
     $(".steps__item").eq(item).addClass("steps__item--check");
   });
 
-  owl.on("changed.owl.carousel", function (event) {
+  owl4.on("changed.owl.carousel", function (event) {
     var item = event.item.index;
     $(".steps__item").removeClass("steps__item--check");
     $(".steps__item")
@@ -284,72 +294,27 @@ jQuery(document).ready(function () {
   });
 
   $(".locations__slider").click(function () {
-    var top = $(document).scrollTop();
+    $("body").addClass("body__back");
     var window_height = $(window).height();
-    console.log(top);
-    console.log(window_height);
     $(".locations__slider").addClass("locations__slider--open");
     var slider_height = $(".locations__slider").height();
-    var top_slider_position = top + ((window_height - slider_height) / 2);
-    console.log(top_slider_position);
-    console.log(slider_height);
+    var top_slider_position = (window_height - slider_height) / 2;
     $(".locations__slider").css("top", top_slider_position);
+
+    
+    $("#owl-carousel").trigger("refresh.owl.carousel");
+    
+
+
     $(document).click(function (e) {
       var div = $(".locations__slider");
       if (!div.is(e.target) && div.has(e.target).length === 0) {
         $(".locations__slider").removeClass("locations__slider--open");
         $(".locations__slider").css("top", "0");
-        $("#owl-carousel").trigger("destroy.owl.carousel");
-        $("#owl-carousel").owlCarousel({
-          loop: true,
-          autoplay: true,
-          autoplayHoverPause: true,
-          dots: false,
-          center: true,
-          nav: false,
-          lazyLoad: true,
-          responsive: {
-            0: {
-              items: 1,
-              margin: 0,
-            },
-            768: {
-              items: 1,
-              margin: 0,
-            },
-            1290: {
-              items: 1,
-              margin: 0,
-              nav: true,
-            },
-          },
-        });
+        $("#owl-carousel").trigger("refresh.owl.carousel");
+        $("body").removeClass("body__back");
       }
     });
-    $("#owl-carousel").trigger("destroy.owl.carousel");
-    $("#owl-carousel").owlCarousel({
-      loop: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      dots: false,
-      center: true,
-      nav: false,
-      lazyLoad: true,
-      responsive: {
-        0: {
-          items: 1,
-          margin: 0,
-        },
-        768: {
-          items: 1,
-          margin: 0,
-        },
-        1290: {
-          items: 1,
-          margin: 0,
-          nav: true,
-        },
-      },
-    });
+    
   });
 });

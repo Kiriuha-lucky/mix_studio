@@ -77,6 +77,23 @@ body {
   }
 }
 
+.body__back {
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100vw !important;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1400;
+  }
+}
+
 .button {
   margin: 0 auto;
   text-decoration: none;

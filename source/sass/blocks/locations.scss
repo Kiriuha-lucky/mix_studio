@@ -52,16 +52,19 @@
 
     &--open {
       width: 100vw;
-      position: absolute;
+      position: fixed;
       // top: 50%;
       left: 50%;
       transform:  translateX(-50%);
+      z-index: 6000;
+
     }
 
     @include min($tablet) {
       width: 670px;
       height: 450px;
       flex-shrink: 0;
+
     }
 
     @include min($desktop) {
@@ -69,6 +72,11 @@
       width: 750px;
       height: 500px;
       flex-shrink: 0;
+
+      &--open {
+        width: 1000px;
+        height: 666px;
+      }
     }
   }
 
